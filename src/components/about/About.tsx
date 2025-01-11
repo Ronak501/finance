@@ -8,7 +8,7 @@ import {
 
 function About() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen w-[100%] bg-white">
       {/* Hero Section */}
       <div className="pt-16">
         <div className="relative h-[400px]">

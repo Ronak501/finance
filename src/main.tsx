@@ -2,7 +2,12 @@ import "./index.css";
 import App from "./components/home/Home.tsx";
 import About from "./components/about/About.tsx";
 import Resources from "./components/resources/Resources.tsx";
+import Contact from "./components/contact/Contact.tsx";
+import Team from "./components/team/Team.tsx";
+import SmeExchange from "./components/smeexchange/SmeExchange.tsx";
+import Fund from "./components/fund/Fund.tsx";
 import Layout from "./Layout.tsx";
+import SignIn from "./components/signIn/SignIn.tsx";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -18,6 +23,11 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/team" element={<Team />} />
+      <Route path="/smeexchange" element={<SmeExchange />} />
+      <Route path="/fund" element={<Fund />} />
+      <Route path="/signin" element={<SignIn />} /> 
     </Route>
   )
 );

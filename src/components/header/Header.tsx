@@ -42,12 +42,21 @@ function Header() {
                 TEAM
               </NavLink>
               <NavLink
+                to="/smeexchange"
+                className="text-gray-700 hover:text-[#1ac8ed]"
+              >
+                SME EXCHANGE
+              </NavLink>
+              <NavLink
                 to="/contact"
                 className="text-gray-700 hover:text-[#1ac8ed]"
               >
                 CONTACT
               </NavLink>
             </div>
+            <button onClick={() => window.location.href = "/signin"} className="bg-[#1ac8ed] px-4 py-2 rounded-r-md hover:bg-[#15b5d8] transition-colors">
+              Log In
+            </button>
           </div>
         </div>
       </nav>
