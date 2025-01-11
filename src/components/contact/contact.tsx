@@ -94,7 +94,6 @@ function Contact() {
               </form>
             </div>
 
-            {/* Contact Information */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
@@ -102,31 +101,39 @@ function Contact() {
                   <div className="flex items-start">
                     <MapPin className="h-6 w-6 text-[#1ac8ed] mt-1" />
                     <div className="ml-4">
-                      <h3 className="font-semibold">Office Location</h3>
-                      <p className="text-gray-600">123 Innovation Drive</p>
-                      <p className="text-gray-600">Silicon Valley, CA 94025</p>
+                      <h3 className="font-semibold text-gray-800">
+                        Office Location
+                      </h3>
+                      <p className="text-gray-600">
+                        05, Nathubhai Tower, Udhna Main Road
+                      </p>
+                      <p className="text-gray-600">Surat, Gujrat, 394210</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-[#1ac8ed] mt-1" />
                     <div className="ml-4">
-                      <h3 className="font-semibold">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <h3 className="text-gray-800 font-semibold ">Phone</h3>
+                      <p className="text-gray-600">+91 9892486751</p>
+                      <p className="text-gray-600">+91 9727201001</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="h-6 w-6 text-[#1ac8ed] mt-1" />
                     <div className="ml-4">
-                      <h3 className="font-semibold">Email</h3>
-                      <p className="text-gray-600">info@venturefund.com</p>
+                      <h3 className="font-semibold text-gray-800">Email</h3>
+                      <p className="text-gray-600">bmanish11@gmail.com</p>
+                      <p className="text-gray-600">Jigneshji2005@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-[#1ac8ed] mt-1" />
                     <div className="ml-4">
-                      <h3 className="font-semibold">Office Hours</h3>
+                      <h3 className="font-semibold text-gray-800">
+                        Office Hours
+                      </h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 9:00 AM - 6:00 PM
+                        Monday - Friday: 8:00 AM - 8:00 PM
                       </p>
                       <p className="text-gray-600">Saturday - Sunday: Closed</p>
                     </div>
@@ -135,11 +142,12 @@ function Contact() {
               </div>
 
               {/* Map */}
-              <div className="bg-gray-200 h-64 rounded-xl">
-                {/* Add your map integration here */}
-                <div className="w-full h-full rounded-xl bg-gray-300 flex items-center justify-center">
-                  <p className="text-gray-600">Map Integration</p>
-                </div>
+              <div className="bg-gray-200 h-64 rounded-xl relative">
+                <img
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
+                  alt="Maps"
+                />
               </div>
             </div>
           </div>
@@ -182,7 +190,9 @@ function Contact() {
               },
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
+                <h3 className="text-gray-800 text-lg font-semibold mb-2">
+                  {faq.question}
+                </h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
             ))}

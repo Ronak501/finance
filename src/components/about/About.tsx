@@ -12,7 +12,7 @@ function About() {
       {/* Hero Section */}
       <div className="pt-16">
         <div className="relative h-[400px]">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1ac8ed] to-blue-600 opacity-90 z-10"></div>
+          <div className="absolute z-1inset-0 bg-gradient-to-r from-[#1ac8ed] to-blue-600 opacity-90 z-10"></div>
           <img
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
             alt="About Us"

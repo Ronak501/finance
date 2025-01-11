@@ -8,9 +8,44 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
+import "./TargetPortfolioCharacteristics.css";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const [dealSize, setDealSize] = useState(0);
+  const [investeeCompanies, setInvesteeCompanies] = useState(0);
+  const [minorityStakeInvestment, setMinorityStakeInvestment] = useState(0);
+  const [sponsorCommitment, setSponsorCommitment] = useState(0);
+  const [fundManagerCommitment, setFundManagerCommitment] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (dealSize < 10) {
+        setDealSize(dealSize + 1);
+      }
+      if (investeeCompanies < 25) {
+        setInvesteeCompanies(investeeCompanies + 1);
+      }
+      if (minorityStakeInvestment < 49) {
+        setMinorityStakeInvestment(minorityStakeInvestment + 1);
+      }
+      if (sponsorCommitment < 15) {
+        setSponsorCommitment(sponsorCommitment + 1);
+      }
+      if (fundManagerCommitment < 5) {
+        setFundManagerCommitment(fundManagerCommitment + 1);
+      }
+    }, 100); // Adjust interval for counting speed
+
+    return () => clearInterval(intervalId);
+  }, [
+    dealSize,
+    investeeCompanies,
+    minorityStakeInvestment,
+    sponsorCommitment,
+    fundManagerCommitment,
+  ]);
 
   const slides = [
     {
@@ -44,7 +79,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-hidden bg-white">
+    <div className="min-h-screen max-w-full overflow-hidden bg-white">
       {/* Hero Section with Pagination */}
       <div className="pt-16">
         <div className="relative h-[625px]">
@@ -113,30 +148,78 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Users className="h-12 w-12 text-[#1ac8ed] mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
+              <h3 className="text-gray-800 text-xl font-semibold mb-2">
+                Expert Team
+              </h3>
               <p className="text-gray-600">
-                Our team brings decades of experience in venture capital and
-                entrepreneurship.
+                HIGH EXPERIENCE IN PRIMARY MARKETS
               </p>
+              <p className="text-gray-600">EXPERIENCE IN SME STOCK EXCHANGE</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <BarChart2 className="h-12 w-12 text-[#1ac8ed] mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Strategic Growth</h3>
+              <h3 className="text-gray-800 text-xl font-semibold mb-2">
+                Strategic Growth
+              </h3>
               <p className="text-gray-600">
-                We help companies scale through strategic guidance and
-                operational support.
+                UNDERSTANDING RISK APPETITES/MANAGEMENT
               </p>
+              <p className="text-gray-600">FLEXIBILITY AND ADAPTABILITY</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Globe className="h-12 w-12 text-[#1ac8ed] mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Global Network</h3>
+              <h3 className="text-gray-800 text-xl font-semibold mb-2">
+                Global Network
+              </h3>
               <p className="text-gray-600">
-                Access our vast network of industry leaders, experts, and
-                potential partners.
+                SPONSOR AND FUND MANAGERS "SKIN IN THE GAME"
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* TPC Section */}
+      <div className="container">
+        <div className="header text-black">
+          <div className="line"></div>
+          <span>Target Portfolio Characteristics</span>
+        </div>
+
+        <div className="stats bg-white text-black">
+          <div className="stat">
+            <span className="value">{dealSize}</span>
+            <span className="unit">CR</span>
+            <span className="label">DEAL SIZE</span>
+          </div>
+
+          <div className="stat">
+            <span className="value">{investeeCompanies}</span>
+            <span className="label">INVESTEE COMPANIES</span>
+          </div>
+
+          <div className="stat">
+            <span className="value">{minorityStakeInvestment}%</span>
+            <span className="label">MINORITY STAKE INVESTMENT</span>
+          </div>
+        </div>
+
+        <div className="line"></div>
+        <span className="title text-black">We Have Skin In The Game</span>
+
+        <div className="commitments bg-white text-black">
+          <div className="commitment">
+            <span className="value">{sponsorCommitment}</span>
+            <span className="unit">CR</span>
+            <span className="label">SPONSOR COMMITMENT</span>
+          </div>
+
+          <div className="commitment">
+            <span className="value">{fundManagerCommitment}</span>
+            <span className="unit">CR</span>
+            <span className="label">FUND MANAGER COMMITMENT</span>
           </div>
         </div>
       </div>
@@ -181,24 +264,28 @@ function App() {
             <div className="flex items-center space-x-4">
               <Phone className="h-6 w-6 text-[#1ac8ed]" />
               <div>
-                <h3 className="font-semibold">Call Us</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
+                <h3 className="text-gray-800 font-semibold">Call Us</h3>
+                <p className="text-gray-600">+91 9892486751</p>
+                <p className="text-gray-600">+91 9727201001</p>
               </div>
             </div>
 
             <div className="flex items-center space-x-4">
               <Mail className="h-6 w-6 text-[#1ac8ed]" />
               <div>
-                <h3 className="font-semibold">Email Us</h3>
-                <p className="text-gray-600">contact@venturefund.com</p>
+                <h3 className="text-gray-800 font-semibold">Email Us</h3>
+                <p className="text-gray-600">bmanish11@gmail.com</p>
+                <p className="text-gray-600">Jigneshji2005@gmail.com</p>
               </div>
             </div>
 
             <div className="flex items-center space-x-4">
               <MapPin className="h-6 w-6 text-[#1ac8ed]" />
               <div>
-                <h3 className="font-semibold">Visit Us</h3>
-                <p className="text-gray-600">123 Investment Ave, NY 10001</p>
+                <h3 className="text-gray-800 font-semibold">Visit Us</h3>
+                <p className="text-gray-600">
+                  05, Nathubhai Tower, Udhna Main Road Surat, Gujrat, 394210
+                </p>
               </div>
             </div>
           </div>

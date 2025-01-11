@@ -1,9 +1,45 @@
+"use client";
+
 import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
+import React, { useEffect } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
-function SignIn() {
+export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
+  const navigate = useNavigate();
+  const [user, setUser] = React.useState({
+    email: "",
+    password: "",
+  });
+  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+
+  const onLogin = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/users/login", user);
+      console.log("Login success", response.data);
+      toast.success("Login success");
+      navigate("/profile");
+    } catch (error: any) {
+      console.log("Login failed", error.message);
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (user.email.length > 0 && user.password.length > 0) {
+      setButtonDisabled(false);
+    } else {
+      setButtonDisabled(true);
+    }
+  }, [user]);
 
   return (
     <div className="min-h-screen pt-16 bg-gray-50">
@@ -49,6 +85,8 @@ function SignIn() {
                 <input
                   type="email"
                   id="email"
+                  value={user.email}
+                  onChange={(e) => setUser({ ...user, email: e.target.value })}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed] bg-white text-white"
                   placeholder="john@example.com"
                 />
@@ -69,6 +107,10 @@ function SignIn() {
                   id="password"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed] bg-white text-white"
                   placeholder="••••••••"
+                  value={user.password}
+                  onChange={(e) =>
+                    setUser({ ...user, password: e.target.value })
+                  }
                 />
                 <Lock className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
                 <button
@@ -111,13 +153,14 @@ function SignIn() {
 
             <button
               type="submit"
-              className="w-full bg-[#1ac8ed] text-white py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
+              onClick={onLogin}
+              className="w-full bg-[#1ac8ed] text-white py-2  px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
             >
               {isLogin ? "Sign In" : "Create Account"}
             </button>
           </form>
 
-          <div className="mt-6">
+          <div className="mt-3">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300"></div>
@@ -132,7 +175,7 @@ function SignIn() {
             </div>
 
             <button
-              className="w-full bg-[#1ac8ed] text-white py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
+              className="w-full bg-[#1ac8ed] text-white mt-2 py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
               onClick={() => setIsLogin(!isLogin)}
             >
               {isLogin ? "Create an account" : "Sign in to your account"}
@@ -143,5 +186,3 @@ function SignIn() {
     </div>
   );
 }
-
-export default SignIn;

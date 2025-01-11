@@ -8,6 +8,7 @@ import SmeExchange from "./components/smeexchange/SmeExchange.tsx";
 import Fund from "./components/fund/Fund.tsx";
 import Layout from "./Layout.tsx";
 import SignIn from "./components/signIn/SignIn.tsx";
+import SignUp from "./components/signUp/SignUp.tsx";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="/smeexchange" element={<SmeExchange />} />
       <Route path="/fund" element={<Fund />} />
       <Route path="/signin" element={<SignIn />} /> 
+      <Route path="/signup" element={<SignUp />} />
     </Route>
   )
 );
