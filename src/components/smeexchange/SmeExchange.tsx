@@ -94,7 +94,7 @@ function SmeExchange() {
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
                 <feature.icon className="h-12 w-12 text-[#1ac8ed] mb-6" />
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -121,7 +121,7 @@ function SmeExchange() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{listing.name}</h3>
+                  <h3 className="text-xl text-gray-800 font-semibold mb-2">{listing.name}</h3>
                   <div className="space-y-2 mb-4">
                     <p className="text-[#1ac8ed]">{listing.sector}</p>
                     <p className="text-gray-600">Revenue: {listing.revenue}</p>
@@ -178,10 +178,10 @@ function SmeExchange() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1ac8ed] text-white font-bold mb-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1ac8ed] text-gray-800 font-bold mb-6">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <h3 className="text-xl text-gray-800 font-semibold mb-4">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}

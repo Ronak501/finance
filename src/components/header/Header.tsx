@@ -10,7 +10,7 @@ function Header() {
             <div className="flex items-center">
               <TrendingUp className="h-8 w-8 text-[#1ac8ed]" />
               <span className="ml-2 text-xl font-bold text-gray-800">
-                VentureFund
+                Infiply
               </span>
             </div>
             <div className="hidden md:flex space-x-8">

@@ -182,16 +182,19 @@ function App() {
       </div>
 
       {/* TPC Section */}
-      <div className="container">
+      <div className="container h-[640px] mt-20">
         <div className="header text-black">
-          <div className="line"></div>
-          <span>Target Portfolio Characteristics</span>
+          <span className="title text-3xl text-black-900 font-bold">
+            Target Portfolio Characteristics
+          </span>
         </div>
 
-        <div className="stats bg-white text-black">
+        <div className="stats bg-white text-black mt-20">
           <div className="stat">
-            <span className="value">{dealSize}</span>
-            <span className="unit">CR</span>
+            <div className="value">
+              <span className="value">{dealSize}</span>
+              <span className="unit">CR</span>
+            </div>
             <span className="label">DEAL SIZE</span>
           </div>
 
@@ -206,19 +209,26 @@ function App() {
           </div>
         </div>
 
-        <div className="line"></div>
-        <span className="title text-black">We Have Skin In The Game</span>
+        <div className="header text-black mt-20">
+          <span className="title text-3xl font-bold text-black">
+            We Have Skin In The Game
+          </span>
+        </div>
 
-        <div className="commitments bg-white text-black">
+        <div className="commitments bg-white text-black mt-20">
           <div className="commitment">
-            <span className="value">{sponsorCommitment}</span>
-            <span className="unit">CR</span>
+            <div className="value">
+              <span className="value">{sponsorCommitment}</span>
+              <span className="unit">CR</span>
+            </div>
             <span className="label">SPONSOR COMMITMENT</span>
           </div>
 
           <div className="commitment">
-            <span className="value">{fundManagerCommitment}</span>
-            <span className="unit">CR</span>
+            <div className="value">
+              <span className="value">{fundManagerCommitment}</span>
+              <span className="unit">CR</span>
+            </div>
             <span className="label">FUND MANAGER COMMITMENT</span>
           </div>
         </div>

@@ -113,7 +113,7 @@ function Resources() {
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
                 {category.icon}
-                <h2 className="text-2xl font-bold mb-6">{category.category}</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-800">{category.category}</h2>
                 <div className="space-y-6">
                   {category.items.map((item, itemIdx) => (
                     <div key={itemIdx} className="group">
@@ -138,7 +138,7 @@ function Resources() {
       <div className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-800">Stay Updated</h2>
             <p className="text-gray-600 mb-8">
               Subscribe to our newsletter to receive the latest insights,
               reports, and updates directly in your inbox.

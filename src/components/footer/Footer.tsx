@@ -1,4 +1,4 @@
-import { TrendingUp } from "lucide-react";
+import { TrendingUp, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <TrendingUp className="h-8 w-8 text-[#1ac8ed]" />
-              <span className="ml-2 text-xl font-bold">VentureFund</span>
+              <span className="ml-2 text-xl font-bold">Infiply</span>
             </div>
             <p className="text-gray-400">
               Building tomorrow's success stories through strategic investments
@@ -44,7 +44,10 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/smeexchange" className="text-gray-400 hover:text-white">
+                <Link
+                  to="/smeexchange"
+                  className="text-gray-400 hover:text-white"
+                >
                   SME Exchange
                 </Link>
               </li>
@@ -83,19 +86,34 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest updates.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-gray-800 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#1ac8ed]"
-              />
-              <button className="bg-[#1ac8ed] px-4 py-2 rounded-r-md hover:bg-[#15b5d8] transition-colors">
-                Subscribe
-              </button>
+            <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
+            <div className="flex items-center space-x-4">
+              <Phone className="h-6 w-6 text-[#1ac8ed]" />
+              <div>
+                <p className="text-gray-400 hover:text-white">+91 9892486751</p>
+                <p className="text-gray-400 hover:text-white">+91 9727201001</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4 space-y-2">
+              <Mail className="h-6 w-6 text-[#1ac8ed]" />
+              <div>
+                <p className="text-gray-400 hover:text-white">
+                  bmanish11@gmail.com
+                </p>
+                <p className="text-gray-400 hover:text-white">
+                  Jigneshji2005@gmail.com
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4 space-y-2">
+              <MapPin className="h-6 w-6 text-[#1ac8ed]" />
+              <div>
+                <p className="text-gray-400 hover:text-white">
+                  05, Nathubhai Tower,Udhna
+                </p>
+              </div>
             </div>
           </div>
         </div>
