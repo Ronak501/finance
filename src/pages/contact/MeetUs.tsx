@@ -145,7 +145,7 @@ function MeetUs() {
               <div className="bg-gray-200 h-64 rounded-xl relative">
                 <img
                   className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
+                  src="/photos/maps.png"
                   alt="Maps"
                 />
               </div>
