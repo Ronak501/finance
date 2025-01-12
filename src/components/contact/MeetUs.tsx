@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
-function Contact() {
+function MeetUs() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -203,4 +203,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default MeetUs;

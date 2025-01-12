@@ -2,7 +2,7 @@ import "./index.css";
 import App from "./components/home/Home";
 import About from "./components/about/About";
 import Resources from "./components/resources/Resources";
-import Contact from "./components/contact/Contact";
+import MeetUs from "./components/contact/MeetUs";
 import Team from "./components/team/Team";
 import SmeExchange from "./components/smeexchange/SmeExchange";
 import Fund from "./components/fund/Fund";
@@ -25,7 +25,7 @@ const AppRouter = () => {
           <Route index element={<App />} />
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<MeetUs />} />
           <Route path="/team" element={<Team />} />
           <Route path="/smeexchange" element={<SmeExchange />} />
           <Route path="/fund" element={<Fund />} />
