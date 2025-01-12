@@ -37,10 +37,10 @@ export default function NiftyIndicesBarGraph() {
               dataKey="name"
               stroke="#8884d8"
               interval={0}
-              angle={-45}
+              // angle={-45}
               textAnchor="end"
               height={60}
-              tick={{ fontSize: 8 }}
+              tick={{ fontSize: 9 }}
             />;
             {/* <XAxis dataKey="name" stroke="#8884d8" interval={0} /> */}
             <YAxis domain={[10, 70]} stroke="#8884d8" />
