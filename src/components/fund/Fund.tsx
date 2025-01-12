@@ -90,7 +90,7 @@ function Fund() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {investmentCriteria.map((criteria, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">{criteria.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{criteria.title}</h3>
                 <p className="text-gray-600">{criteria.description}</p>
               </div>
             ))}
@@ -138,7 +138,7 @@ function Fund() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1ac8ed] text-white font-bold mb-6">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{step.title}</h3>
                 <p className="text-gray-600 mb-4">{step.description}</p>
                 <p className="text-sm text-[#1ac8ed] font-semibold">
                   {step.duration}
