@@ -42,20 +42,18 @@ function Team() {
 
   const advisors = [
     {
-      name: "Dr. Robert Wilson",
-      position: "Technology Advisor",
-      image:
-        "/photos/bansal.jpeg",
-      bio: "Former CTO of Fortune 500 tech company",
-      linkedin: "#",
+      name: "Mr. Manish Bansal",
+      position: "Fund Advisor",
+      image: "/photos/bansal.jpeg",
+      bio: "25+ years of experience in Financial Markets",
+      linkedin: "https://www.linkedin.com/in/manish-bansal-bb711117/",
     },
     {
-      name: "Lisa Zhang",
-      position: "Healthcare Advisor",
-      image:
-        "/photos/lakhani.jpeg",
+      name: "Mr. Jignesh Lakhani",
+      position: "Fund Advisor",
+      image: "/photos/lakhani.jpeg",
       bio: "20+ years in healthcare innovation and entrepreneurship",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/jignesh-lakhani-806550b1/",
     },
   ];
 

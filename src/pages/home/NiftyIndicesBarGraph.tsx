@@ -30,10 +30,19 @@ export default function NiftyIndicesBarGraph() {
           Return Profile (CAGR) - 5 Years
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-1">
+      <CardContent className="p-1 mt-4">
         <ResponsiveContainer width="100%" height={400}>
           <BarChart data={data}>
-            <XAxis dataKey="name" stroke="#8884d8" interval={0} />
+            <XAxis
+              dataKey="name"
+              stroke="#8884d8"
+              interval={0}
+              angle={-45}
+              textAnchor="end"
+              height={60}
+              tick={{ fontSize: 8 }}
+            />;
+            {/* <XAxis dataKey="name" stroke="#8884d8" interval={0} /> */}
             <YAxis domain={[10, 70]} stroke="#8884d8" />
             <Tooltip />
             <Bar dataKey="return" fill="#22c55e" barSize={50}>
