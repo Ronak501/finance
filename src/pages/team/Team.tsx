@@ -45,7 +45,7 @@ function Team() {
       name: "Dr. Robert Wilson",
       position: "Technology Advisor",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
+        "/photos/bansal.jpeg",
       bio: "Former CTO of Fortune 500 tech company",
       linkedin: "#",
     },
@@ -53,7 +53,7 @@ function Team() {
       name: "Lisa Zhang",
       position: "Healthcare Advisor",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
+        "/photos/lakhani.jpeg",
       bio: "20+ years in healthcare innovation and entrepreneurship",
       linkedin: "#",
     },
@@ -141,8 +141,9 @@ function Team() {
               Advisory Board
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Industry experts providing strategic guidance and deep domain
-              expertise.
+              Highly skilled industry professionals delivering actionable
+              strategic insights and specialized expertise, backed by a track
+              record of measurable success in Fund Management.
             </p>
           </div>
 
@@ -156,7 +157,7 @@ function Team() {
                   <img
                     src={advisor.image}
                     alt={advisor.name}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-84 object-fit"
                   />
                 </div>
                 <div className="p-6">

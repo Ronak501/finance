@@ -9,6 +9,7 @@ import {
   MapPin,
 } from "lucide-react";
 import "./TargetPortfolioCharacteristics.css";
+import NiftyIndicesBarGraph from "./NiftyIndicesBarGraph";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <div className="min-h-screen max-w-full overflow-hidden bg-white">
+
       {/* Hero Section with Pagination */}
       <div className="pt-16">
         <div className="relative h-[625px]">
@@ -199,12 +201,16 @@ function App() {
           </div>
 
           <div className="stat">
-            <span className="value">{investeeCompanies}</span>
+            <div className="value">
+              <span className="value">{investeeCompanies}</span>
+            </div>
             <span className="label">INVESTEE COMPANIES</span>
           </div>
 
           <div className="stat">
-            <span className="value">{minorityStakeInvestment}%</span>
+            <div className="value">
+              <span className="value">{minorityStakeInvestment}%</span>
+            </div>
             <span className="label">MINORITY STAKE INVESTMENT</span>
           </div>
         </div>
@@ -255,6 +261,13 @@ function App() {
               <div className="text-lg">Countries</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Graph Section */}
+      <div className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NiftyIndicesBarGraph />
         </div>
       </div>
 

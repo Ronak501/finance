@@ -1,21 +1,17 @@
 import "./index.css";
-import App from "./components/home/Home";
-import About from "./components/about/About";
-import Resources from "./components/resources/Resources";
-import MeetUs from "./components/contact/MeetUs";
-import Team from "./components/team/Team";
-import SmeExchange from "./components/smeexchange/SmeExchange";
-import Fund from "./components/fund/Fund";
+import App from "./pages/home/Home";
+import About from "./pages/about/About";
+import Resources from "./pages/resources/Resources";
+import MeetUs from "./pages/contact/MeetUs";
+import Team from "./pages/team/Team";
+import SmeExchange from "./pages/smeexchange/SmeExchange";
+import Fund from "./pages/fund/Fund";
 import Layout from "./Layout";
-import SignIn from "./components/signIn/SignIn";
-import SignUp from "./components/signUp/SignUp";
+import SignIn from "./pages/signIn/SignIn";
+import SignUp from "./pages/signUp/SignUp";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
   return (
