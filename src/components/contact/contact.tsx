@@ -107,7 +107,7 @@ function Contact() {
                       <p className="text-gray-600">
                         05, Nathubhai Tower, Udhna Main Road
                       </p>
-                      <p className="text-gray-600">Surat, Gujrat, 394210</p>
+                      <p className="text-gray-600">Surat, Gujarat, 394210</p>
                     </div>
                   </div>
                   <div className="flex items-start">

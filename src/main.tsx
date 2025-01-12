@@ -1,38 +1,41 @@
 import "./index.css";
-import App from "./components/home/Home.tsx";
-import About from "./components/about/About.tsx";
-import Resources from "./components/resources/Resources.tsx";
-import Contact from "./components/contact/Contact.tsx";
-import Team from "./components/team/Team.tsx";
-import SmeExchange from "./components/smeexchange/SmeExchange.tsx";
-import Fund from "./components/fund/Fund.tsx";
-import Layout from "./Layout.tsx";
-import SignIn from "./components/signIn/SignIn.tsx";
-import SignUp from "./components/signUp/SignUp.tsx";
+import App from "./components/home/Home";
+import About from "./components/about/About";
+import Resources from "./components/resources/Resources";
+import Contact from "./components/contact/Contact";
+import Team from "./components/team/Team";
+import SmeExchange from "./components/smeexchange/SmeExchange";
+import Fund from "./components/fund/Fund";
+import Layout from "./Layout";
+import SignIn from "./components/signIn/SignIn";
+import SignUp from "./components/signUp/SignUp";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import {
+  BrowserRouter as Router,
   Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements
+  Routes
 } from "react-router-dom";
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path="/" element={<App />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/resources" element={<Resources />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/team" element={<Team />} />
-      <Route path="/smeexchange" element={<SmeExchange />} />
-      <Route path="/fund" element={<Fund />} />
-      <Route path="/signin" element={<SignIn />} /> 
-      <Route path="/signup" element={<SignUp />} />
-    </Route>
-  )
-);
+const AppRouter = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<App />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/smeexchange" element={<SmeExchange />} />
+          <Route path="/fund" element={<Fund />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+};
 
 const root = document.getElementById("root");
 
@@ -40,6 +43,6 @@ if (!root) throw new Error("Root element not found");
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppRouter />
   </React.StrictMode>
 );
