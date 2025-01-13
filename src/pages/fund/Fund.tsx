@@ -1,16 +1,44 @@
 import {
-  Target,
   BarChart2,
   PieChart,
-  Briefcase,
+  ChartNoAxesCombined,
+  HeartHandshake,
+  BookType,
+  Clock,
 } from "lucide-react";
 
 function Fund() {
   const fundStats = [
-    { label: "Fund Size", value: "$100M", icon: PieChart },
-    { label: "Investment Range", value: "$1M - $10M", icon: BarChart2 },
-    { label: "Portfolio Companies", value: "25+", icon: Briefcase },
-    { label: "Sectors", value: "Tech, Healthcare, Fintech", icon: Target },
+    {
+      label: "Fund Size",
+      value: "Rs. 100 Cr. with a green-shoe option of Rs. 50Cr",
+      icon: PieChart,
+    },
+    {
+      label: "Sponsor and Fund Manager",
+      value:
+        "Infiply Advisors LLP, which is promoted by experienced Capital Market professionals Mr. Jignesh Lakhani and Mr. Manish Bansal",
+      icon: ChartNoAxesCombined,
+    },
+    {
+      label: "Sponsor’s contribution",
+      value:
+        "Sponsors to invest minimum 2.5% of the fund size or Rs. 5 Cr., whichever is lower, as prescribed by regulations",
+      icon: HeartHandshake,
+    },
+    { label: "Type of Scheme", value: "Close Ended", icon: BookType },
+    {
+      label: "Status of Fund",
+      value:
+        "Contributory Determinate Investment Trust under the Indian Trusts Act",
+      icon: BarChart2,
+    },
+    {
+      label: "Tenor",
+      value:
+        "7 years from the date of Initial closing; Term may be extended for 2 additional periods of 1 year each, subject to approvals as required by law",
+      icon: Clock,
+    },
   ];
 
   const investmentCriteria = [
@@ -65,9 +93,7 @@ function Fund() {
                 <h3 className="text-lg font-semibold text-gray-900">
                   {stat.label}
                 </h3>
-                <p className="text-2xl font-bold text-[#1ac8ed] mt-2">
-                  {stat.value}
-                </p>
+                <p className="text-1xl text-gray-800 mt-2">{stat.value}</p>
               </div>
             ))}
           </div>
@@ -90,7 +116,9 @@ function Fund() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {investmentCriteria.map((criteria, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">{criteria.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {criteria.title}
+                </h3>
                 <p className="text-gray-600">{criteria.description}</p>
               </div>
             ))}
@@ -138,7 +166,9 @@ function Fund() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1ac8ed] text-white font-bold mb-6">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {step.title}
+                </h3>
                 <p className="text-gray-600 mb-4">{step.description}</p>
                 <p className="text-sm text-[#1ac8ed] font-semibold">
                   {step.duration}

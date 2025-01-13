@@ -105,7 +105,7 @@ function MeetUs() {
                         Office Location
                       </h3>
                       <p className="text-gray-600">
-                        05, Nathubhai Tower, Udhna Main Road
+                        06, Nathubhai Tower, Udhna Main Road
                       </p>
                       <p className="text-gray-600">Surat, Gujarat, 394210</p>
                     </div>

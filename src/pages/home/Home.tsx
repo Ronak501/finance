@@ -184,7 +184,7 @@ function App() {
       </div>
 
       {/* TPC Section */}
-      <div className="container h-[640px] mt-20 align-center">
+      <div className="container h-[640px] mt-20 align-center m-auto">
         <div className="header text-black">
           <span className="title text-3xl text-black-900 font-bold">
             Target Portfolio Characteristics
