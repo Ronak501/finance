@@ -25,9 +25,9 @@ const data = [
 
 export default function NiftySMEEmergeGraph() {
   return (
-    <div className="bg-white p-8">
+    <div className="bg-white">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center">
+        <div className="p-4 flex items-center">
           <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mr-4">
             {/* Placeholder for NSE logo */}
           </div>
@@ -35,7 +35,7 @@ export default function NiftySMEEmergeGraph() {
             Nifty SME Emerge
           </h1>
         </div>
-        <div className="text-right">
+        <div className="text-right mr-2">
           <p className="text-sm text-gray-500">Source: Nifty Indices</p>
         </div>
       </div>

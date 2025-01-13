@@ -32,7 +32,7 @@ export default function NiftyIndicesBarGraph() {
       </CardHeader>
       <CardContent className="p-1 mt-4">
         <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={data}>
+          <BarChart data={data} barGap={2}>
             <XAxis
               dataKey="name"
               stroke="#8884d8"
@@ -44,7 +44,7 @@ export default function NiftyIndicesBarGraph() {
             />;
             <YAxis domain={[10, 70]} stroke="#8884d8" />
             <Tooltip />
-            <Bar dataKey="return" fill="#22c55e" barSize={50} className="py-1">
+            <Bar dataKey="return" fill="#22c55e" barSize={50}>
               {data.map((entry, index) => (
                 <text
                   key={`label-${index}`}
