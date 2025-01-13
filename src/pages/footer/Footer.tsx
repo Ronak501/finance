@@ -116,7 +116,7 @@ function Footer() {
               <MapPin className="h-6 w-6 text-[#1ac8ed]" />
               <div>
                 <p className="text-gray-400 hover:text-white">
-                  05, Nathubhai Tower,Udhna
+                  06, Nathubhai Tower,Udhna
                 </p>
               </div>
             </div>

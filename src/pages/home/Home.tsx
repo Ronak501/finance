@@ -307,7 +307,7 @@ function App() {
               <div>
                 <h3 className="text-gray-800 font-semibold">Visit Us</h3>
                 <p className="text-gray-600">
-                  05, Nathubhai Tower, Udhna Main Road Surat, Gujrat, 394210
+                  06, Nathubhai Tower, Udhna Main Road Surat, Gujrat, 394210
                 </p>
               </div>
             </div>

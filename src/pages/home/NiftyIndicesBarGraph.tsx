@@ -44,7 +44,7 @@ export default function NiftyIndicesBarGraph() {
             />;
             <YAxis domain={[10, 70]} stroke="#8884d8" />
             <Tooltip />
-            <Bar dataKey="return" fill="#22c55e" barSize={50}>
+            <Bar dataKey="return" fill="#22c55e" barSize={45}>
               {data.map((entry, index) => (
                 <text
                   key={`label-${index}`}
