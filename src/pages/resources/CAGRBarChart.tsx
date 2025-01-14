@@ -49,7 +49,7 @@ export default function CAGRBarChart() {
             <YAxis stroke="#000" />
             <Tooltip />
             <Bar dataKey="cagr" fill="#10B981" barSize={40}>
-                {data.map((entry, index) => (
+                {data.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={colors[index]} />
                 ))}
             </Bar>
