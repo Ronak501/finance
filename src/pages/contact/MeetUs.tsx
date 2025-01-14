@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 
 function MeetUs() {
   return (
@@ -142,13 +142,23 @@ function MeetUs() {
               </div>
 
               {/* Map */}
-              <div className="bg-gray-200 h-64 rounded-xl relative">
-                <img
-                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                  src="/photos/maps.png"
-                  alt="Maps"
-                />
-              </div>
+              <a
+                href="https://maps.app.goo.gl/fhczmuYrushFMsBN9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-gray-200 h-64 rounded-xl relative">
+                  <img
+                    className="absolute inset-0 w-full h-full object-cover rounded-xl"
+                    src="/photos/maps.png"
+                    alt="Maps"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 flex items-center justify-center rounded-xl transition duration-300">
+                    <ArrowRight className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

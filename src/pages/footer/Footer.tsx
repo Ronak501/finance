@@ -1,4 +1,4 @@
-import { TrendingUp, Phone, Mail, MapPin } from "lucide-react";
+import { TrendingUp, Phone, Mail, MapPin, ChevronsRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -20,17 +20,20 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link to="/" className="text-gray-400 hover:text-white">
                   Home
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link to="/about" className="text-gray-400 hover:text-white">
                   About Us
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link
                   to="/resources"
                   className="text-gray-400 hover:text-white"
@@ -38,17 +41,20 @@ function Footer() {
                   Resources
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link to="/fund" className="text-gray-400 hover:text-white">
                   Fund Details
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link to="/team" className="text-gray-400 hover:text-white">
                   Team
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link
                   to="/smeexchange"
                   className="text-gray-400 hover:text-white"
@@ -56,7 +62,8 @@ function Footer() {
                   SME Exchange
                 </Link>
               </li>
-              <li>
+              <li className="flex items-center">
+                <ChevronsRight />
                 <Link to="/contact" className="text-gray-400 hover:text-white">
                   Contact
                 </Link>
@@ -65,26 +72,21 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">Graphs & Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Seed Funding
+                <a href="/" className="text-gray-400 hover:text-white">
+                  Return Profile
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Growth Capital
+                <a href="/smeexchange" className="text-gray-400 hover:text-white">
+                  Nifty SME Emerge
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Strategic Advisory
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Network Access
+                <a href="/smeexchange" className="text-gray-400 hover:text-white">
+                  BSE SME IPO Index
                 </a>
               </li>
             </ul>

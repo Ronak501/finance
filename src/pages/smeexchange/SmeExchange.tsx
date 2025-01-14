@@ -1,8 +1,7 @@
 import {
-  Building2,
-  Users,
-  BarChart2,
-  PieChart,
+  Scale,
+  Users,  
+  HandCoins,
   ArrowRight,
 } from "lucide-react";
 import NiftySMEEmergeGraph from "./NiftySMEEmergeGraph";
@@ -11,24 +10,21 @@ import NiftySMEIpoGraph from "./NiftySMEIpoGraph";
 function SmeExchange() {
   const features = [
     {
-      icon: Building2,
-      title: "Business Listing",
-      description: "List your business for potential investors and buyers",
+      icon: HandCoins,
+      title: "Fund Objective",
+      description:
+        "Provide growth capital and strategic support to small and medium enterprises (SMEs) and help investors build wealth",
+    },
+    {
+      icon: Scale,
+      title: "Regulatory Status",
+      description:
+        "SEBI registered investment vehicle SEBI Registration no. –IN/AIF1/24-25/1676",
     },
     {
       icon: Users,
-      title: "Investor Network",
-      description: "Connect with qualified investors and strategic partners",
-    },
-    {
-      icon: BarChart2,
-      title: "Market Analytics",
-      description: "Access market insights and valuation metrics",
-    },
-    {
-      icon: PieChart,
-      title: "Deal Flow",
-      description: "Streamlined process for transactions and due diligence",
+      title: "Key Stakeholders",
+      description: "Investors Investee Companies Investment Manager/Sponsor",
     },
   ];
 
@@ -81,7 +77,7 @@ function SmeExchange() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Platform Features
+              Overview of INFIPLY SME Growth Fund
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive tools and services to facilitate successful business
@@ -89,7 +85,7 @@ function SmeExchange() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -143,7 +139,7 @@ function SmeExchange() {
                     </p>
                   </div>
                   <p className="text-gray-600 mb-4">{listing.description}</p>
-                  <button className="flex items-center text-[#1ac8ed] hover:text-[#15b5d8]">
+                  <button className="flex items-center bg-[#1ac8ed] text-white hover:text-gray-800">
                     View Details
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </button>

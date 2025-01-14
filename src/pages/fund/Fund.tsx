@@ -74,7 +74,8 @@ function Fund() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
             <h1 className="text-5xl font-bold mb-6">Fund Details</h1>
             <p className="text-xl max-w-2xl">
-              Strategic investments in transformative technology companies
+              Cubs become lions, Saplings become tree, and SMEs become large
+              companies
             </p>
           </div>
         </div>

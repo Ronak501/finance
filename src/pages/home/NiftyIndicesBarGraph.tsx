@@ -4,6 +4,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
 import {
@@ -33,6 +34,7 @@ export default function NiftyIndicesBarGraph() {
       <CardContent className="p-1 mt-4">
         <ResponsiveContainer width="100%" height={400}>
           <BarChart data={data} barGap={2}>
+            <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
               stroke="#8884d8"
@@ -41,7 +43,8 @@ export default function NiftyIndicesBarGraph() {
               textAnchor="end"
               height={60}
               tick={{ fontSize: 9 }}
-            />;
+            />
+            ;
             <YAxis domain={[10, 70]} stroke="#8884d8" />
             <Tooltip />
             <Bar dataKey="return" fill="#22c55e" barSize={45}>

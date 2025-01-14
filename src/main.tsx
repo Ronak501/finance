@@ -6,6 +6,7 @@ import MeetUs from "./pages/contact/MeetUs";
 import Team from "./pages/team/Team";
 import SmeExchange from "./pages/smeexchange/SmeExchange";
 import Fund from "./pages/fund/Fund";
+import ScrollToTop from "./pages/ScrollToTop";
 import Layout from "./Layout";
 import SignIn from "./pages/signIn/SignIn";
 import SignUp from "./pages/signUp/SignUp";
@@ -16,6 +17,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 const AppRouter = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />

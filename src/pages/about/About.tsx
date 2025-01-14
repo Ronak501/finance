@@ -36,7 +36,9 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Target className="h-12 w-12 text-[#1ac8ed] mb-4" />
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">Our Vision</h2>
+              <h2 className="text-2xl font-bold mb-4 text-gray-800">
+                Our Vision
+              </h2>
               <p className="text-gray-600">
                 To be the catalyst for transformative innovation in the venture
                 capital ecosystem, empowering visionary entrepreneurs to build
@@ -45,7 +47,9 @@ function About() {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Award className="h-12 w-12 text-[#1ac8ed] mb-4" />
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">Our Mission</h2>
+              <h2 className="text-2xl font-bold mb-4 text-gray-800">
+                Our Mission
+              </h2>
               <p className="text-gray-600">
                 To provide strategic capital, operational expertise, and
                 invaluable networks to ambitious founders, helping them
@@ -62,11 +66,12 @@ function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Investment Philosophy
+              Investment Strategy
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We believe in backing exceptional founders who are building
-              innovative solutions to meaningful problems.
+              Invest primarily in securities of those companies, which are
+              listed or proposed to be listed on SME exchange or SME segment of
+              an exchange.
             </p>
           </div>
 
@@ -74,29 +79,33 @@ function About() {
             <div className="text-center">
               <Briefcase className="h-12 w-12 text-[#1ac8ed] mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                Long-term Partnership
+                Core Focus Area
               </h3>
               <p className="text-gray-600">
-                We're committed to supporting our portfolio companies throughout
-                their growth journey.
+                Identify the most promising and high-potential investment
+                opportunities based on thorough market analysis, industry
+                trends, and evaluation of growth potential of businesses.
               </p>
             </div>
             <div className="text-center">
               <Users className="h-12 w-12 text-[#1ac8ed] mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                Founder-First Approach
+                Capital Deployment
               </h3>
               <p className="text-gray-600">
-                We prioritize strong relationships with founders and support
-                their vision for growth.
+                Efficient capital allocation to maximize returns and minimize
+                risks, leveraging a diversied portfolio approach.
               </p>
             </div>
             <div className="text-center">
               <BarChart2 className="h-12 w-12 text-[#1ac8ed] mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">Value Creation</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                Hands-On Approach
+              </h3>
               <p className="text-gray-600">
-                Beyond capital, we provide strategic guidance and access to our
-                global network.
+                Active engagement with portfolio companies, providing
+                operational guidance, strategic advice, and access to industry
+                networks to drive growth and value creation.
               </p>
             </div>
           </div>
@@ -108,23 +117,23 @@ function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Investment Focus
+              Target Companies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We focus on high-growth sectors with transformative potential.
+              Businesses with potential to grow protably for long run.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              "Enterprise SaaS",
-              "FinTech",
-              "HealthTech",
-              "AI/ML",
-              "Consumer Tech",
-              "Deep Tech",
-              "Clean Tech",
-              "Web3/Blockchain",
+              "Owner Managers with skin in the game",
+              "Long runway of Growth",
+              "Operating in Niche",
+              "Economic Moat with some sort of pricing power",
+              "Focus on protability and Return on Capital",
+              "Cash generating businesses",
+              "Low capital intensive",
+              "Ethical Management",
             ].map((sector, index) => (
               <div
                 key={index}
