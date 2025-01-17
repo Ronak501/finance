@@ -26,7 +26,7 @@ const data = [
 export default function NiftyIndicesBarGraph() {
   return (
     <Card className="w-full max-w-6xl mx-auto bg-white">
-      <CardHeader className="bg-green-500 text-white p-4 rounded-t-lg">
+      <CardHeader className="bg-[#1fd43a] text-white p-4 rounded-t-lg">
         <CardTitle className="text-2xl font-bold">
           Return Profile (CAGR) - 5 Years
         </CardTitle>

@@ -5,7 +5,7 @@ function MeetUs() {
     <div className="pt-16">
       {/* Hero Section */}
       <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1ac8ed] to-blue-600 opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
         <img
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
           alt="Contact Us"
@@ -39,7 +39,7 @@ function MeetUs() {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed]"
+                    className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a]"
                     placeholder="John Doe"
                   />
                 </div>
@@ -53,7 +53,7 @@ function MeetUs() {
                   <input
                     type="email"
                     id="email"
-                    className="w-full bg-white px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed]"
+                    className="w-full bg-white px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a]"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -67,7 +67,7 @@ function MeetUs() {
                   <input
                     type="text"
                     id="subject"
-                    className="w-full px-4 bg-white py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed]"
+                    className="w-full px-4 bg-white py-2 border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a]"
                     placeholder="Investment Inquiry"
                   />
                 </div>
@@ -81,13 +81,13 @@ function MeetUs() {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full bg-white px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed]"
+                    className="w-full bg-white px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a]"
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#1ac8ed] text-white py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
+                  className="w-full bg-[#1fd43a] text-white py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
                 >
                   Send Message
                 </button>
@@ -99,7 +99,7 @@ function MeetUs() {
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-[#1ac8ed] mt-1" />
+                    <MapPin className="h-6 w-6 text-[#1fd43a] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">
                         Office Location
@@ -111,7 +111,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-[#1ac8ed] mt-1" />
+                    <Phone className="h-6 w-6 text-[#1fd43a] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-gray-800 font-semibold ">Phone</h3>
                       <p className="text-gray-600">+91 9892486751</p>
@@ -119,7 +119,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-[#1ac8ed] mt-1" />
+                    <Mail className="h-6 w-6 text-[#1fd43a] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">Email</h3>
                       <p className="text-gray-600">bmanish11@gmail.com</p>
@@ -127,7 +127,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-[#1ac8ed] mt-1" />
+                    <Clock className="h-6 w-6 text-[#1fd43a] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">
                         Office Hours

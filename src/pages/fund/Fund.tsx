@@ -64,7 +64,7 @@ function Fund() {
     <div className="pt-16">
       {/* Hero Section */}
       <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1ac8ed] to-blue-600 opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
         <img
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
           alt="Fund Details"
@@ -90,7 +90,7 @@ function Fund() {
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <stat.icon className="h-10 w-10 text-[#1ac8ed] mb-4" />
+                <stat.icon className="h-10 w-10 text-[#1fd43a] mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900">
                   {stat.label}
                 </h3>
@@ -164,14 +164,14 @@ function Fund() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1ac8ed] text-white font-bold mb-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1fd43a] text-white font-bold mb-6">
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{step.description}</p>
-                <p className="text-sm text-[#1ac8ed] font-semibold">
+                <p className="text-sm text-[#1fd43a] font-semibold">
                   {step.duration}
                 </p>
               </div>

@@ -81,7 +81,6 @@ function App() {
 
   return (
     <div className="min-h-screen max-w-full overflow-hidden bg-white">
-
       {/* Hero Section with Pagination */}
       <div className="pt-16">
         <div className="relative h-[625px]">
@@ -96,7 +95,7 @@ function App() {
                   : "opacity-0 -translate-x-full"
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1ac8ed] to-blue-600 opacity-90 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
               <img
                 src={slide.image}
                 alt={slide.title}
@@ -106,7 +105,7 @@ function App() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
                   <h1 className="text-5xl font-bold mb-6">{slide.title}</h1>
                   <p className="text-xl mb-8 max-w-2xl">{slide.description}</p>
-                  <button className="bg-white text-[#1ac8ed] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  <button className="bg-white text-[#1fd43a] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center">
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </button>
@@ -149,7 +148,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Users className="h-12 w-12 text-[#1ac8ed] mb-4" />
+              <Users className="h-12 w-12 text-[#1fd43a] mb-4" />
               <h3 className="text-gray-800 text-xl font-semibold mb-2">
                 Expert Team
               </h3>
@@ -160,7 +159,7 @@ function App() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <BarChart2 className="h-12 w-12 text-[#1ac8ed] mb-4" />
+              <BarChart2 className="h-12 w-12 text-[#1fd43a] mb-4" />
               <h3 className="text-gray-800 text-xl font-semibold mb-2">
                 Strategic Growth
               </h3>
@@ -171,7 +170,7 @@ function App() {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Globe className="h-12 w-12 text-[#1ac8ed] mb-4" />
+              <Globe className="h-12 w-12 text-[#1fd43a] mb-4" />
               <h3 className="text-gray-800 text-xl font-semibold mb-2">
                 Global Network
               </h3>
@@ -241,7 +240,7 @@ function App() {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-[#1ac8ed] py-20">
+      <div className="bg-[#1fd43a] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
             <div>
@@ -285,7 +284,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center space-x-4">
-              <Phone className="h-6 w-6 text-[#1ac8ed]" />
+              <Phone className="h-6 w-6 text-[#1fd43a]" />
               <div>
                 <h3 className="text-gray-800 font-semibold">Call Us</h3>
                 <p className="text-gray-600">+91 9892486751</p>
@@ -294,7 +293,7 @@ function App() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Mail className="h-6 w-6 text-[#1ac8ed]" />
+              <Mail className="h-6 w-6 text-[#1fd43a]" />
               <div>
                 <h3 className="text-gray-800 font-semibold">Email Us</h3>
                 <p className="text-gray-600">bmanish11@gmail.com</p>
@@ -303,7 +302,7 @@ function App() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <MapPin className="h-6 w-6 text-[#1ac8ed]" />
+              <MapPin className="h-6 w-6 text-[#1fd43a]" />
               <div>
                 <h3 className="text-gray-800 font-semibold">Visit Us</h3>
                 <p className="text-gray-600">

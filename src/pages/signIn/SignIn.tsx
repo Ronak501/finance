@@ -34,7 +34,7 @@ export default function SignIn() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed] bg-white text-black"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a] bg-white text-black"
                   placeholder="John Doe"
                 />
               </div>
@@ -51,7 +51,7 @@ export default function SignIn() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed] bg-white text-white"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a] bg-white text-white"
                   placeholder="john@example.com"
                 />
                 <Mail className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
@@ -69,7 +69,7 @@ export default function SignIn() {
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-[#1ac8ed] focus:border-[#1ac8ed] bg-white text-white"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-[#1fd43a] focus:border-[#1fd43a] bg-white text-white"
                   placeholder="••••••••"
                 />
                 <Lock className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
@@ -93,7 +93,7 @@ export default function SignIn() {
                   <input
                     type="checkbox"
                     id="remember"
-                    className="h-4 w-4 text-[#1ac8ed] focus:ring-[#1ac8ed] border-gray-300 rounded"
+                    className="h-4 w-4 text-[#1fd43a] focus:ring-[#1fd43a] border-gray-300 rounded"
                   />
                   <label
                     htmlFor="remember"
@@ -104,7 +104,7 @@ export default function SignIn() {
                 </div>
                 <a
                   href="#"
-                  className="text-sm font-medium text-[#1ac8ed] hover:text-[#15b5d8]"
+                  className="text-sm font-medium text-[#1fd43a] hover:text-[#15b5d8]"
                 >
                   Forgot password?
                 </a>
@@ -113,7 +113,7 @@ export default function SignIn() {
 
             <button
               type="submit"
-              className="w-full bg-[#1ac8ed] text-white py-2  px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
+              className="w-full bg-[#1fd43a] text-white py-2  px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
             >
               {isLogin ? "Sign In" : "Create Account"}
             </button>
@@ -134,7 +134,7 @@ export default function SignIn() {
             </div>
 
             <button
-              className="w-full bg-[#1ac8ed] text-white mt-2 py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
+              className="w-full bg-[#1fd43a] text-white mt-2 py-2 px-4 rounded-md hover:bg-[#15b5d8] transition-colors"
               onClick={() => setIsLogin(!isLogin)}
             >
               {isLogin ? "Create an account" : "Sign in to your account"}

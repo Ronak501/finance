@@ -13,7 +13,7 @@ function Resources() {
   const resources = [
     {
       category: "Research Reports",
-      icon: <FileText className="h-8 w-8 text-[#1ac8ed] mb-4" />,
+      icon: <FileText className="h-8 w-8 text-[#1fd43a] mb-4" />,
       items: [
         {
           title: "State of SaaS in 2024",
@@ -31,7 +31,7 @@ function Resources() {
     },
     {
       category: "Blog Posts",
-      icon: <BookOpen className="h-8 w-8 text-[#1ac8ed] mb-4" />,
+      icon: <BookOpen className="h-8 w-8 text-[#1fd43a] mb-4" />,
       items: [
         {
           title: "Building Resilient Startups",
@@ -47,7 +47,7 @@ function Resources() {
     },
     {
       category: "News & Updates",
-      icon: <Newspaper className="h-8 w-8 text-[#1ac8ed] mb-4" />,
+      icon: <Newspaper className="h-8 w-8 text-[#1fd43a] mb-4" />,
       items: [
         {
           title: "Q1 2024 Investment Highlights",
@@ -59,7 +59,7 @@ function Resources() {
     },
     {
       category: "Video Content",
-      icon: <Video className="h-8 w-8 text-[#1ac8ed] mb-4" />,
+      icon: <Video className="h-8 w-8 text-[#1fd43a] mb-4" />,
       items: [
         {
           title: "Founder Stories Series",
@@ -70,7 +70,7 @@ function Resources() {
     },
     {
       category: "Podcasts",
-      icon: <Podcast className="h-8 w-8 text-[#1ac8ed] mb-4" />,
+      icon: <Podcast className="h-8 w-8 text-[#1fd43a] mb-4" />,
       items: [
         {
           title: "VentureFund Insights",
@@ -86,7 +86,7 @@ function Resources() {
       {/* Hero Section */}
       <div className="pt-16">
         <div className="relative h-[300px]">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1ac8ed] to-blue-600 opacity-90 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
           <img
             src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&q=80"
             alt="Resources"
@@ -120,8 +120,8 @@ function Resources() {
                 <div className="space-y-6">
                   {category.items.map((item, itemIdx) => (
                     <div key={itemIdx} className="group">
-                      <a href="#" className="block hover:text-[#1ac8ed]">
-                        <h3 className="text-lg font-semibold mb-2 group-hover:text-[#1ac8ed] flex items-center">
+                      <a href="#" className="block hover:text-[#1fd43a]">
+                        <h3 className="text-lg font-semibold text-[#1fd43a] mb-2 group-hover:text-[#04be20] flex items-center">
                           {item.title}
                           <ExternalLink className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </h3>
@@ -159,9 +159,9 @@ function Resources() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1ac8ed]"
+                className="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1fd43a]"
               />
-              <button className="bg-[#1ac8ed] text-white px-6 py-3 rounded-r-lg hover:bg-[#15b5d8] transition-colors flex items-center">
+              <button className="bg-[#1fd43a] text-white px-6 py-3 rounded-r-lg hover:bg-[#15b5d8] transition-colors flex items-center">
                 Subscribe
                 <Download className="h-4 w-4 ml-2" />
               </button>

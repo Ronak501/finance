@@ -29,13 +29,13 @@ const colors = [
 
 export default function CAGRBarChart() {
   return (
-    <Card className="w-full max-w-6xl mx-auto bg-white">
+    <Card className="w-full max-w-5xl mx-auto bg-white">
       <CardHeader className="bg-green-500 text-white p-4 rounded-t-lg">
         <CardTitle className="text-2xl font-bold">5 Years CAGR</CardTitle>
       </CardHeader>
-      <CardContent className="p-4 mt-3">
+      <CardContent className="p-1 mt-4">
         <ResponsiveContainer width="100%" height={400}> 
-            <BarChart height={400} data={data} barGap={2}>
+            <BarChart data={data} barGap={2}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
                 dataKey="name"

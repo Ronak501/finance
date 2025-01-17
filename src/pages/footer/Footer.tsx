@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <TrendingUp className="h-8 w-8 text-[#1ac8ed]" />
+              <TrendingUp className="h-8 w-8 text-[#1fd43a]" />
               <span className="ml-2 text-xl font-bold">Infiply</span>
             </div>
             <p className="text-gray-400">
@@ -95,7 +95,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
             <div className="flex items-center space-x-4">
-              <Phone className="h-6 w-6 text-[#1ac8ed]" />
+              <Phone className="h-6 w-6 text-[#1fd43a]" />
               <div>
                 <p className="text-gray-400 hover:text-white">+91 9892486751</p>
                 <p className="text-gray-400 hover:text-white">+91 9727201001</p>
@@ -103,7 +103,7 @@ function Footer() {
             </div>
 
             <div className="flex items-center space-x-4 space-y-2">
-              <Mail className="h-6 w-6 text-[#1ac8ed]" />
+              <Mail className="h-6 w-6 text-[#1fd43a]" />
               <div>
                 <p className="text-gray-400 hover:text-white">
                   bmanish11@gmail.com
@@ -115,7 +115,7 @@ function Footer() {
             </div>
 
             <div className="flex items-center space-x-4 space-y-2">
-              <MapPin className="h-6 w-6 text-[#1ac8ed]" />
+              <MapPin className="h-6 w-6 text-[#1fd43a]" />
               <div>
                 <p className="text-gray-400 hover:text-white">
                   06, Nathubhai Tower,Udhna
