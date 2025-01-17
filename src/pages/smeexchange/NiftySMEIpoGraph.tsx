@@ -64,16 +64,16 @@ export default function NiftySMEEmergeGraph() {
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#8884d8"
+            stroke="#1fd43a"
             activeDot={{ r: 8 }}
             dot={({ cx, cy, payload }) => (
               <g>
-                <Dot cx={cx} cy={cy} r={4} stroke="#8884d8" fill="#8884d8" />
+                <Dot cx={cx} cy={cy} r={4} stroke="#1fd43a" fill="#1fd43a" />
                 <text
                   x={cx}
                   y={cy - 10}
                   textAnchor="middle"
-                  fill="#8884d8"
+                  fill="#1fd43a"
                   fontSize="10"
                 >
                   {payload.value}
