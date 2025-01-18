@@ -8,7 +8,7 @@ function Header() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
               <span className="ml-2 h-10 w-20 text-xl font-bold text-gray-800 aspect-w-3/4 aspect-h-3/4 mb-3">
-                <img src="/photos/svg.svg" alt="Logo" />
+                <img src="/photos/jpg.jpg" alt="Logo" />
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
