@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { TrendingUp } from "lucide-react";
 
 function Header() {
   return (
