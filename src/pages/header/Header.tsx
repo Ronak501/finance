@@ -7,7 +7,7 @@ function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
-              <span className="ml-2 h-10 w-20 text-xl font-bold text-gray-800 aspect-w-3/4 aspect-h-3/4 mb-3">
+              <span className="h-10 w-20 text-xl font-bold text-gray-800 aspect-w-3/4 aspect-h-3/4">
                 <img src="/photos/jpg.jpg" alt="Logo" />
               </span>
             </div>
