@@ -61,7 +61,7 @@ function Team() {
     <div className="pt-16">
       {/* Hero Section */}
       <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2C7C41] to-green-600 opacity-90 z-10"></div>
         <img
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
           alt="Our Team"
@@ -106,20 +106,20 @@ function Team() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-[#1fd43a] font-medium mb-4">
+                  <p className="text-[#2C7C41] font-medium mb-4">
                     {member.position}
                   </p>
                   <p className="text-gray-600 mb-4">{member.bio}</p>
                   <div className="flex space-x-4">
                     <a
                       href={member.linkedin}
-                      className="text-gray-600 hover:text-[#1fd43a]"
+                      className="text-gray-600 hover:text-[#2C7C41]"
                     >
                       <Linkedin className="h-5 w-5" />
                     </a>
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-gray-600 hover:text-[#1fd43a]"
+                      className="text-gray-600 hover:text-[#2C7C41]"
                     >
                       <Mail className="h-5 w-5" />
                     </a>
@@ -160,13 +160,13 @@ function Team() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{advisor.name}</h3>
-                  <p className="text-[#1fd43a] font-medium mb-4">
+                  <p className="text-[#2C7C41] font-medium mb-4">
                     {advisor.position}
                   </p>
                   <p className="text-gray-600 mb-4">{advisor.bio}</p>
                   <a
                     href={advisor.linkedin}
-                    className="text-gray-600 hover:text-[#1fd43a]"
+                    className="text-gray-600 hover:text-[#2C7C41]"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>

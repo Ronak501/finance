@@ -12,49 +12,49 @@ function Header() {
               </span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <NavLink to="/" className="text-gray-700 hover:text-[#1fd43a]">
+              <NavLink to="/" className="text-gray-700 hover:text-[#2C7C41]">
                 HOME
               </NavLink>
               <NavLink
                 to="/about"
-                className="text-gray-700 hover:text-[#1fd43a]"
+                className="text-gray-700 hover:text-[#2C7C41]"
               >
                 ABOUT
               </NavLink>
               <NavLink
                 to="/resources"
-                className="text-gray-700 hover:text-[#1fd43a]"
+                className="text-gray-700 hover:text-[#2C7C41]"
               >
                 RESOURCES
               </NavLink>
               <NavLink
                 to="/fund"
-                className="text-gray-700 hover:text-[#1fd43a]"
+                className="text-gray-700 hover:text-[#2C7C41]"
               >
                 FUND DETAILS
               </NavLink>
               <NavLink
                 to="/team"
-                className="text-gray-700 hover:text-[#1fd43a]"
+                className="text-gray-700 hover:text-[#2C7C41]"
               >
                 TEAM
               </NavLink>
               <NavLink
                 to="/smeexchange"
-                className="text-gray-700 hover:text-[#1fd43a]"
+                className="text-gray-700 hover:text-[#2C7C41]"
               >
                 SME EXCHANGE
               </NavLink>
               <NavLink
                 to="/contact"
-                className="text-gray-700 hover:text-[#1fd43a]"
+                className="text-gray-700 hover:text-[#2C7C41]"
               >
                 CONTACT
               </NavLink>
             </div>
             <button
               onClick={() => (window.location.href = "/signin")}
-              className="bg-[#1fd43a] px-4 py-2 rounded-r-md hover:bg-[#04be20] transition-colors"
+              className="bg-[#2C7C41] px-4 py-2 rounded-r-md hover:bg-[#04be20] transition-colors"
             >
               Log In
             </button>

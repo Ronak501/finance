@@ -30,30 +30,30 @@ const colors = [
 export default function CAGRBarChart() {
   return (
     <Card className="w-full max-w-5xl mx-auto bg-white">
-      <CardHeader className="bg-green-500 text-white p-4 rounded-t-lg">
+      <CardHeader className="bg-[#2C7C41] text-white p-4 rounded-t-lg">
         <CardTitle className="text-2xl font-bold">5 Years CAGR</CardTitle>
       </CardHeader>
       <CardContent className="p-1 mt-4">
-        <ResponsiveContainer width="100%" height={400}> 
-            <BarChart data={data} barGap={2}>
+        <ResponsiveContainer width="100%" height={400}>
+          <BarChart data={data} barGap={2}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
-                dataKey="name"
-                stroke="#000"
-                interval={0}
-                angle={-20}
-                textAnchor="end"
-                height={60}
-                tick={{ fontSize: 10 }}
+              dataKey="name"
+              stroke="#000"
+              interval={0}
+              angle={-20}
+              textAnchor="end"
+              height={60}
+              tick={{ fontSize: 10 }}
             />
             <YAxis stroke="#000" />
             <Tooltip />
             <Bar dataKey="cagr" fill="#10B981" barSize={40}>
-                {data.map((_, index) => (
+              {data.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={colors[index]} />
-                ))}
+              ))}
             </Bar>
-            </BarChart>
+          </BarChart>
         </ResponsiveContainer>
       </CardContent>
     </Card>

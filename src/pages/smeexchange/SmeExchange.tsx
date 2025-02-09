@@ -56,7 +56,7 @@ function SmeExchange() {
     <div className="pt-16">
       {/* Hero Section */}
       <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2C7C41] to-green-600 opacity-90 z-10"></div>
         <img
           src="https://images.unsplash.com/photo-1553484771-8bbd4e16c60a?auto=format&fit=crop&q=80"
           alt="SME Exchange"
@@ -91,7 +91,7 @@ function SmeExchange() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
-                <feature.icon className="h-12 w-12 text-[#1fd43a] mb-6" />
+                <feature.icon className="h-12 w-12 text-[#2C7C41] mb-6" />
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
                   {feature.title}
                 </h3>
@@ -132,14 +132,14 @@ function SmeExchange() {
                     {listing.name}
                   </h3>
                   <div className="space-y-2 mb-4">
-                    <p className="text-[#1fd43a]">{listing.sector}</p>
+                    <p className="text-[#2C7C41]">{listing.sector}</p>
                     <p className="text-gray-600">Revenue: {listing.revenue}</p>
                     <p className="text-gray-600">
                       Location: {listing.location}
                     </p>
                   </div>
                   <p className="text-gray-600 mb-4">{listing.description}</p>
-                  <button className="flex items-center bg-[#1fd43a] text-white hover:text-gray-800">
+                  <button className="flex items-center bg-[#2C7C41] text-white hover:text-gray-800">
                     View Details
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </button>
@@ -193,7 +193,7 @@ function SmeExchange() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1fd43a] text-gray-800 font-bold mb-6">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#2C7C41] text-gray-800 font-bold mb-6">
                   {step.step}
                 </div>
                 <h3 className="text-xl text-gray-800 font-semibold mb-4">

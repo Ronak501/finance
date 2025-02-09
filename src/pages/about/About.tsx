@@ -12,7 +12,7 @@ function About() {
       {/* Hero Section */}
       <div className="pt-16">
         <div className="relative h-[400px]">
-          <div className="absolute z-1inset-0 bg-gradient-to-r from-[#1fd43a] to-green-600 opacity-90 z-10"></div>
+          <div className="absolute z-1inset-0 bg-gradient-to-r from-[#2C7C41] to-green-600 opacity-90 z-10"></div>
           <img
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
             alt="About Us"
@@ -35,7 +35,7 @@ function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <Target className="h-12 w-12 text-[#1fd43a] mb-4" />
+              <Target className="h-12 w-12 text-[#2C7C41] mb-4" />
               <h2 className="text-2xl font-bold mb-4 text-gray-800">
                 Our Vision
               </h2>
@@ -46,7 +46,7 @@ function About() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <Award className="h-12 w-12 text-[#1fd43a] mb-4" />
+              <Award className="h-12 w-12 text-[#2C7C41] mb-4" />
               <h2 className="text-2xl font-bold mb-4 text-gray-800">
                 Our Mission
               </h2>
@@ -77,7 +77,7 @@ function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <Briefcase className="h-12 w-12 text-[#1fd43a] mx-auto mb-4" />
+              <Briefcase className="h-12 w-12 text-[#2C7C41] mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 Core Focus Area
               </h3>
@@ -88,7 +88,7 @@ function About() {
               </p>
             </div>
             <div className="text-center">
-              <Users className="h-12 w-12 text-[#1fd43a] mx-auto mb-4" />
+              <Users className="h-12 w-12 text-[#2C7C41] mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 Capital Deployment
               </h3>
@@ -98,7 +98,7 @@ function About() {
               </p>
             </div>
             <div className="text-center">
-              <BarChart2 className="h-12 w-12 text-[#1fd43a] mx-auto mb-4" />
+              <BarChart2 className="h-12 w-12 text-[#2C7C41] mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 Hands-On Approach
               </h3>
@@ -139,7 +139,7 @@ function About() {
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg text-center"
               >
-                <h3 className="text-lg font-semibold text-[#1fd43a]">
+                <h3 className="text-lg font-semibold text-[#2C7C41]">
                   {sector}
                 </h3>
               </div>

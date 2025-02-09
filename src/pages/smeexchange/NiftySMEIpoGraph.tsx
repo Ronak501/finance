@@ -34,7 +34,7 @@ export default function NiftySMEEmergeGraph() {
           <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mr-4">
             {/* Placeholder for NSE logo */}
           </div>
-          <h1 className="text-2xl font-bold text-green-500">
+          <h1 className="text-2xl font-bold text-[#2C7C41]">
             BSE SME IPO Index
           </h1>
         </div>
