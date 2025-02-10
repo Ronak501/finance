@@ -31,10 +31,7 @@ export default function NiftySMEEmergeGraph() {
     <div className="bg-white">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center p-4">
-          <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 mr-4">
-            {/* Placeholder for NSE logo */}
-          </div>
-          <h1 className="text-2xl font-bold text-[#2C7C41]">
+          <h1 className="p-4 text-2xl font-bold text-[#2C7C41]">
             BSE SME IPO Index
           </h1>
         </div>
@@ -55,25 +52,26 @@ export default function NiftySMEEmergeGraph() {
           <CartesianGrid strokeDasharray="1 3" />
           <XAxis
             dataKey="date"
+            stroke="#2C7C41"
             interval="preserveStartEnd"
             tickFormatter={(date) => new Date(date).getFullYear().toString()}
           />
-          <YAxis domain={[0, 17500]} tickCount={8} />
+          <YAxis domain={[0, 17500]} stroke="#2C7C41" tickCount={8} />
           <Tooltip />
           <Legend />
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#1fd43a"
+            stroke="#2C7C41"
             activeDot={{ r: 8 }}
             dot={({ cx, cy, payload }) => (
               <g>
-                <Dot cx={cx} cy={cy} r={4} stroke="#1fd43a" fill="#1fd43a" />
+                <Dot cx={cx} cy={cy} r={4} stroke="#2C7C41" fill="#2C7C41" />
                 <text
                   x={cx}
                   y={cy - 10}
                   textAnchor="middle"
-                  fill="#1fd43a"
+                  fill="#2C7C41"
                   fontSize="10"
                 >
                   {payload.value}

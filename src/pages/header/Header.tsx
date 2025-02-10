@@ -54,7 +54,7 @@ function Header() {
             </div>
             <button
               onClick={() => (window.location.href = "/signin")}
-              className="bg-[#2C7C41] px-4 py-2 rounded-r-md hover:bg-[#04be20] transition-colors"
+              className="bg-[#2C7C41] text-white px-4 py-2 rounded-r-md hover:bg-[#04be20] transition-colors"
             >
               Log In
             </button>

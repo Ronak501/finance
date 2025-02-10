@@ -19,12 +19,11 @@ const data = [
 ];
 
 const colors = [
-  "#10B981",
-  "#10B981",
-  "#10B981",
-  "#10B981",
-  "#10B981",
-  "#10B981",
+  "#2C7C41",
+  "#2C7C41",
+  "#2C7C41",
+  "#2C7C41",
+  "#2C7C41",
 ];
 
 export default function CAGRBarChart() {
@@ -39,14 +38,14 @@ export default function CAGRBarChart() {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
-              stroke="#000"
+              stroke="#2C7C41"
               interval={0}
               angle={-20}
               textAnchor="end"
               height={60}
               tick={{ fontSize: 10 }}
             />
-            <YAxis stroke="#000" />
+            <YAxis stroke="#2C7C41" />
             <Tooltip />
             <Bar dataKey="cagr" fill="#10B981" barSize={40}>
               {data.map((_, index) => (

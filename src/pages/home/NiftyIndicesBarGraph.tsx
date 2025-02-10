@@ -37,7 +37,7 @@ export default function NiftyIndicesBarGraph() {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="name"
-              stroke="#8884d8"
+              stroke="#2C7C41"
               interval={0}
               angle={-45}
               textAnchor="end"
@@ -45,9 +45,9 @@ export default function NiftyIndicesBarGraph() {
               tick={{ fontSize: 9 }}
             />
             ;
-            <YAxis domain={[10, 70]} stroke="#8884d8" />
+            <YAxis domain={[10, 70]} stroke="#2C7C41" />
             <Tooltip />
-            <Bar dataKey="return" fill="#22c55e" barSize={45}>
+            <Bar dataKey="return" fill="#2C7C41" barSize={45}>
               {data.map((entry, index) => (
                 <text
                   key={`label-${index}`}
