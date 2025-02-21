@@ -13,7 +13,7 @@ function Resources() {
   const resources = [
     {
       category: "Research Reports",
-      icon: <FileText className="h-8 w-8 text-[#2C7C41] mb-4" />,
+      icon: <FileText className="h-14 w-14 text-[#2C7C41] mb-4" />,
       items: [
         {
           title: "State of SaaS in 2024",
@@ -31,7 +31,7 @@ function Resources() {
     },
     {
       category: "Blog Posts",
-      icon: <BookOpen className="h-8 w-8 text-[#2C7C41] mb-4" />,
+      icon: <BookOpen className="h-14 w-14 text-[#2C7C41] mb-4" />,
       items: [
         {
           title: "Building Resilient Startups",
@@ -47,7 +47,7 @@ function Resources() {
     },
     {
       category: "News & Updates",
-      icon: <Newspaper className="h-8 w-8 text-[#2C7C41] mb-4" />,
+      icon: <Newspaper className="h-14 w-14 text-[#2C7C41] mb-4" />,
       items: [
         {
           title: "Q1 2024 Investment Highlights",
@@ -59,7 +59,7 @@ function Resources() {
     },
     {
       category: "Video Content",
-      icon: <Video className="h-8 w-8 text-[#2C7C41] mb-4" />,
+      icon: <Video className="h-14 w-14 text-[#2C7C41] mb-4" />,
       items: [
         {
           title: "Founder Stories Series",
@@ -70,7 +70,7 @@ function Resources() {
     },
     {
       category: "Podcasts",
-      icon: <Podcast className="h-8 w-8 text-[#2C7C41] mb-4" />,
+      icon: <Podcast className="h-14 w-14 text-[#2C7C41] mb-4" />,
       items: [
         {
           title: "VentureFund Insights",

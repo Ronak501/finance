@@ -90,7 +90,7 @@ function Fund() {
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <stat.icon className="h-10 w-10 text-[#2C7C41] mb-4" />
+                <stat.icon className="h-16 w-16 text-[#2C7C41] mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900">
                   {stat.label}
                 </h3>

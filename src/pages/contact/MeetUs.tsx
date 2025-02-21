@@ -99,7 +99,7 @@ function MeetUs() {
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-[#2C7C41] mt-1" />
+                    <MapPin className="h-8 w-8 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">
                         Office Location
@@ -111,7 +111,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-[#2C7C41] mt-1" />
+                    <Phone className="h-8 w-8 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-gray-800 font-semibold ">Phone</h3>
                       <p className="text-gray-600">+91 9892486751</p>
@@ -119,7 +119,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-[#2C7C41] mt-1" />
+                    <Mail className="h-8 w-8 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">Email</h3>
                       <p className="text-gray-600">bmanish11@gmail.com</p>
@@ -127,7 +127,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-[#2C7C41] mt-1" />
+                    <Clock className="h-8 w-8 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">
                         Office Hours

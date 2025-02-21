@@ -91,7 +91,7 @@ function SmeExchange() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
-                <feature.icon className="h-12 w-12 text-[#2C7C41] mb-6" />
+                <feature.icon className="h-16 w-16 text-[#2C7C41] mb-6" />
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
                   {feature.title}
                 </h3>

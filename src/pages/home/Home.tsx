@@ -1,3 +1,4 @@
+import ApexChart from "./ApexChart";
 import { useState, useEffect } from "react";
 import {
   Users,
@@ -121,7 +122,7 @@ function App() {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`h-8 rounded-full transition-all duration-300 ${
                     currentSlide === index
                       ? "w-8 bg-white"
                       : "w-2 bg-white/50 hover:bg-white/75"
@@ -132,6 +133,11 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Priramid Section */}
+      <div className="max-w-5xl mx-auto px-6 py-12">
+        <ApexChart />
       </div>
 
       {/* Features Section */}
@@ -148,34 +154,104 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Users className="h-12 w-12 text-[#2C7C41] mb-4" />
+              <Users className="h-16 w-16 text-[#2C7C41] mb-4" />
               <h3 className="text-gray-800 text-xl font-semibold mb-2">
                 Expert Team
               </h3>
               <p className="text-gray-600">
-                HIGH EXPERIENCE IN PRIMARY MARKETS
+                High Experience In Primary Markets
               </p>
-              <p className="text-gray-600">EXPERIENCE IN SME STOCK EXCHANGE</p>
+              <p className="text-gray-600">Experience In SME Stock Exchange</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <BarChart2 className="h-12 w-12 text-[#2C7C41] mb-4" />
+              <BarChart2 className="h-16 w-16 text-[#2C7C41] mb-4" />
               <h3 className="text-gray-800 text-xl font-semibold mb-2">
                 Strategic Growth
               </h3>
               <p className="text-gray-600">
-                UNDERSTANDING RISK APPETITES/MANAGEMENT
+                Understanding Risk Appetites/Management
               </p>
-              <p className="text-gray-600">FLEXIBILITY AND ADAPTABILITY</p>
+              <p className="text-gray-600">Flexibility And Adaptability</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Globe className="h-12 w-12 text-[#2C7C41] mb-4" />
+              <Globe className="h-16 w-16 text-[#2C7C41] mb-4" />
               <h3 className="text-gray-800 text-xl font-semibold mb-2">
                 Global Network
               </h3>
               <p className="text-gray-600">
-                SPONSOR AND FUND MANAGERS "SKIN IN THE GAME"
+                Sponsor And Fund Managers "Skin In The Game"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full max-w-7xl mx-auto px-4 py-12">
+        {/* Header Section */}
+        <div className="bg-emerald-600 text-white p-8 rounded-t-lg text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Investment Strategy
+          </h1>
+          <p className="text-lg md:text-xl max-w-4xl mx-auto">
+            Invest primarily in securities of those companies, which are listed
+            or proposed to be listed on SME exchange or SME segment of an
+            exchange
+          </p>
+        </div>
+
+        {/* Strategy Pyramid */}
+        <div className="mt-12 space-y-8">
+          {/* Core Focus Area */}
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-full md:w-1/2">
+              <div className="bg-emerald-600 text-white p-8 rounded-lg">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center">
+                  Core Focus Area
+                </h2>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <p className="text-gray-700 text-lg">
+                Identify the most promising and high-potential investment
+                opportunities based on thorough market analysis, industry
+                trends, and evaluation of growth potential of businesses.
+              </p>
+            </div>
+          </div>
+
+          {/* Capital Deployment */}
+          <div className="flex flex-col md:flex-row items-center gap-8 md:pl-12">
+            <div className="w-full md:w-2/5">
+              <div className="bg-lime-500 text-white p-8 rounded-lg">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center">
+                  Capital Deployment
+                </h2>
+              </div>
+            </div>
+            <div className="w-full md:w-3/5">
+              <p className="text-gray-700 text-lg">
+                Efficient capital allocation to maximize returns and minimize
+                risks, following a diversified portfolio approach.
+              </p>
+            </div>
+          </div>
+
+          {/* Hands-On Approach */}
+          <div className="flex flex-col md:flex-row items-center gap-8 md:pl-24">
+            <div className="w-full md:w-1/3">
+              <div className="bg-emerald-700 text-white p-8 rounded-lg">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center">
+                  Hands-On Approach
+                </h2>
+              </div>
+            </div>
+            <div className="w-full md:w-2/3">
+              <p className="text-gray-700 text-lg">
+                Active engagement with portfolio companies, as and when
+                required, providing operational guidance, strategic advice, and
+                access to industry networks to drive growth and value creation.
               </p>
             </div>
           </div>
@@ -185,44 +261,44 @@ function App() {
       {/* TPC Section */}
       <div className="container h-[640px] mt-20 align-center m-auto">
         <div className="header text-black">
-          <span className="title text-3xl text-black-900 font-bold">
+          <span className="title text-4xl text-black-900 font-bold">
             Target Portfolio Characteristics
           </span>
         </div>
 
         <div className="stats bg-white text-black mt-20">
           <div className="stat">
-            <div className="value">
+            <div className="value text-9xl">
               <span className="value">{dealSize}</span>
               <span className="unit">CR</span>
             </div>
-            <span className="label">DEAL SIZE</span>
+            <span className="label text-2xl">DEAL SIZE</span>
           </div>
 
           <div className="stat">
-            <div className="value">
+            <div className="value text-8xl">
               <span className="value">{investeeCompanies}</span>
             </div>
-            <span className="label">INVESTEE COMPANIES</span>
+            <span className="label text-2xl">INVESTEE COMPANIES</span>
           </div>
 
           <div className="stat">
-            <div className="value">
+            <div className="value text-8xl">
               <span className="value">{minorityStakeInvestment}%</span>
             </div>
-            <span className="label">MINORITY STAKE INVESTMENT</span>
+            <span className="label text-2xl">MINORITY STAKE INVESTMENT</span>
           </div>
         </div>
 
         <div className="header text-black mt-20">
-          <span className="title text-3xl font-bold text-black">
+          <span className="title text-4xl font-bold text-black">
             We Have Skin In The Game
           </span>
         </div>
 
         <div className="commitments bg-white text-black mt-20">
           <div className="commitment">
-            <div className="value">
+            <div className="value text-8xl">
               <span className="value">{sponsorCommitment}</span>
               <span className="unit">CR</span>
             </div>
@@ -230,7 +306,7 @@ function App() {
           </div>
 
           <div className="commitment">
-            <div className="value">
+            <div className="value text-8xl">
               <span className="value">{fundManagerCommitment}</span>
               <span className="unit">CR</span>
             </div>
