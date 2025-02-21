@@ -2,7 +2,7 @@ import ReactApexChart from "react-apexcharts";
 import { useState } from "react";
 
 const ApexChart = () => {
-  const [state, setState] = useState({
+  const [state] = useState({
     series: [
       {
         name: "Investment Strategy",
@@ -27,7 +27,7 @@ const ApexChart = () => {
       },
       dataLabels: {
         enabled: true,
-        formatter: (val: number, opt: any) => {
+        formatter: (opt: any) => {
           const labels = [
             "Core Focus Area",
             "Capital Deployment",
