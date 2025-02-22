@@ -1,5 +1,4 @@
-import ApexChart from "./ApexChart";
-import { useState, useEffect } from "react";
+  import { useState, useEffect } from "react";
 import {
   Users,
   BarChart2,
@@ -13,8 +12,7 @@ import "./TargetPortfolioCharacteristics.css";
 import NiftyIndicesBarGraph from "./NiftyIndicesBarGraph";
 
 function App() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentSlide, setCurrentSlide] = useState(0); 
   const [dealSize, setDealSize] = useState(0);
   const [investeeCompanies, setInvesteeCompanies] = useState(0);
   const [minorityStakeInvestment, setMinorityStakeInvestment] = useState(0);
@@ -133,11 +131,6 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Priramid Section */}
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <ApexChart />
       </div>
 
       {/* Features Section */}
