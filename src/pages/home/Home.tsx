@@ -5,8 +5,6 @@ import {
   HandCoins,
   ArrowRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import "./TargetPortfolioCharacteristics.css";
 import NiftyIndicesBarGraph from "./NiftyIndicesBarGraph";
 import NiftySMEEmergeGraph from "./NiftySMEEmergeGraph";
@@ -19,13 +17,6 @@ function App() {
   const [minorityStakeInvestment, setMinorityStakeInvestment] = useState(0);
   const [sponsorCommitment, setSponsorCommitment] = useState(0);
   const [fundManagerCommitment, setFundManagerCommitment] = useState(0);
-  const [minorityStake, setMinorityStake] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
   const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
     Icon,
@@ -41,59 +32,6 @@ function App() {
         </div>
       </div>
     </div>
-  );
-
-  useEffect(() => {
-    if (inView) {
-      setIsAnimating(true);
-      const duration = 2000; // 2 seconds
-      const steps = 50;
-      const interval = duration / steps;
-
-      let step = 0;
-      const timer = setInterval(() => {
-        step++;
-        const progress = step / steps;
-
-        setDealSize(Math.floor(progress * 100));
-        setInvesteeCompanies(Math.floor(progress * 25));
-        setMinorityStake(Math.floor(progress * 49));
-        setSponsorCommitment(Math.floor(progress * 20));
-        setFundManagerCommitment(Math.floor(progress * 15));
-
-        if (step === steps) {
-          clearInterval(timer);
-          setIsAnimating(false);
-        }
-      }, interval);
-
-      return () => clearInterval(timer);
-    }
-  }, [inView]);
-
-  interface StatCardProps {
-    value: number;
-    unit?: string;
-    label: string;
-  }
-  
-  const StatCard: React.FC<StatCardProps> = ({ value, unit, label }) => (
-      <motion.div
-        whileHover={{ scale: 1.03 }}
-        className="stat-card bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300"
-      >
-        <motion.div
-          className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent"
-          animate={{ rotateY: isAnimating ? 360 : 0 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        >
-          {value}
-          {unit && <span className="text-4xl ml-1">{unit}</span>}
-        </motion.div>
-        <div className="text-lg md:text-xl mt-3 text-gray-700 font-semibold">
-          {label}
-        </div>
-      </motion.div>
   );
 
   useEffect(() => {
@@ -146,15 +84,15 @@ function App() {
 
   const slides = [
     {
-      image: "https://images.app.goo.gl/QzfaUo1e6sSNC35P6",
+      image: "/scroll/s1.jpeg",
       title: "Navigating Success Together",
       description:
         "We invest in innovative startups and growth companies that are shaping the future of technology and business.",
     },
     {
       image:
-        "https://unsplash.com/photos/pile-of-gold-coins-with-growing-arrows-and-a-dart-board-on-white-background-financial-growth-goals-financial-planning-and-investment-3d-render-illustration-34mzkeB2iFc",
-      title: "Empowering Visionary Founders",
+        "/scroll/s2.jpeg",
+      title: "Building the Future of Finance",
       description:
         "Partner with us to turn your groundbreaking ideas into market-leading companies.",
     },
@@ -183,7 +121,7 @@ function App() {
                   : "opacity-0 -translate-x-full"
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2C7C41] to-green-600 opacity-90 z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r opacity-90 z-10"></div>
               <img
                 src={slide.image}
                 alt={slide.title}
@@ -202,14 +140,14 @@ function App() {
             </div>
           ))}
 
-          {/* Pagination Dots */}
+      {/* Pagination Dots */}
           <div className="absolute bottom-8 left-0 right-0 z-30">
             <div className="flex justify-center space-x-3">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`h-8 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-300 ${
                     currentSlide === index
                       ? "w-8 bg-white"
                       : "w-2 bg-white/50 hover:bg-white/75"
@@ -252,30 +190,6 @@ function App() {
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="bg-[#2C7C41] py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">$500M+</div>
-              <div className="text-lg">Assets Under Management</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">100+</div>
-              <div className="text-lg">Portfolio Companies</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">15+</div>
-              <div className="text-lg">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">25+</div>
-              <div className="text-lg">Countries</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="w-full max-w-7xl mx-auto px-4 py-12 bg-white">
         {/* Header Section */}
         <div className="bg-white text-[#2C7C41] p-8 rounded-t-lg text-center">
@@ -307,52 +221,6 @@ function App() {
             </span>
             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
           </a>
-        </div>
-      </div>
-
-      {/* TPC Section */}
-      <div ref={ref} className="bg-gradient-to-b from-white to-gray-100 py-16">
-        <div className="container mx-auto px-4 max-w-6xl">
-          {/* Main Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-12"
-          >
-            Target Portfolio Characteristics
-          </motion.h2>
-
-          {/* Stats Grid */}
-          <div className="py-1 grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <StatCard value={dealSize} unit="CR" label="DEAL SIZE" />
-            <StatCard value={investeeCompanies} label="INVESTEE COMPANIES" />
-            <StatCard value={minorityStake} unit="%" label="MINORITY STAKE" />
-          </div>
-
-          {/* Second Title */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-12"
-          >
-            We Have Skin In The Game
-          </motion.h2>
-
-          {/* Commitments Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <StatCard
-              value={sponsorCommitment}
-              unit="CR"
-              label="SPONSOR COMMITMENT"
-            />
-            <StatCard
-              value={fundManagerCommitment}
-              unit="CR"
-              label="FUND MANAGER COMMITMENT"
-            />
-          </div>
         </div>
       </div>
 
