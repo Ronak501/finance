@@ -88,17 +88,13 @@ function Footer() {
             <div className="flex items-center space-x-4">
               <Phone className="h-6 w-6 text-[#2C7C41]" />
               <div>
-                <p className="text-gray-400 hover:text-white">+91 9892486751</p>
-                <p className="text-gray-400 hover:text-white">+91 9727201001</p>
+                <p className="text-gray-400 hover:text-white">+91 9327508480</p>
               </div>
             </div>
 
             <div className="flex items-center space-x-4 space-y-2">
-              <Mail className="h-6 w-6 text-[#2C7C41]" />
+              <Mail className="h-6 w-6 text-[#2C7C41] mt-3" />
               <div>
-                <p className="text-gray-400 hover:text-white">
-                  bmanish11@gmail.com
-                </p>
                 <p className="text-gray-400 hover:text-white">
                   Jigneshji2005@gmail.com
                 </p>
@@ -109,7 +105,10 @@ function Footer() {
               <MapPin className="h-6 w-6 text-[#2C7C41]" />
               <div>
                 <p className="text-gray-400 hover:text-white">
-                  06, Nathubhai Tower,Udhna
+                  605, Nathubhai Tower, Udhna 
+                </p>
+                <p className="text-gray-400 hover:text-white">
+                  Main Road, Surat, Gujrat, 394210
                 </p>
               </div>
             </div>

@@ -84,14 +84,14 @@ function App() {
 
   const slides = [
     {
-      image: "/scroll/s1.jpeg",
+      image: "/scroll/s3.jpg",
       title: "Navigating Success Together",
       description:
         "We invest in innovative startups and growth companies that are shaping the future of technology and business.",
     },
     {
       image:
-        "/scroll/s2.jpeg",
+        "/scroll/s2.jpg",
       title: "Building the Future of Finance",
       description:
         "Partner with us to turn your groundbreaking ideas into market-leading companies.",
@@ -129,8 +129,8 @@ function App() {
               />
               <div className="relative z-20 h-full flex items-center">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-                  <h1 className="text-5xl font-bold mb-6">{slide.title}</h1>
-                  <p className="text-xl mb-8 max-w-2xl">{slide.description}</p>
+                  <h1 className="text-5xl text-[#2C7C41] font-bold mb-6">{slide.title}</h1>
+                  <p className="text-xl mb-8 max-w-2xl text-[#2C7C41]">{slide.description}</p>
                   <button className="bg-white text-[#2C7C41] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center">
                     Get Started
                     <ArrowRight className="ml-2 h-5 w-5" />

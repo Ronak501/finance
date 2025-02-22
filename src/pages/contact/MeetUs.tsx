@@ -11,15 +11,12 @@ const contactInformation: ContactInfo[] = [
   {
     icon: MapPin,
     title: "Office Location",
-    details: [
-      "3rd Floor, Barcelona House, Opp-Shellpump Road,",
-      "Prahladnagar, Ahmedabad – 380015, Gujarat, India",
-    ],
+    details: ["605, Nathubhai Tower, Udhna Main Road, Surat, Gujrat, 394210"],
   },
   {
     icon: Phone,
     title: "Calling Support",
-    details: ["Toll Free: 1800 571 2929", "Mobile: 97273 71142"],
+    details: ["Toll Free: 1800 571 2929", "Mobile: +91 9327508480"],
   },
   {
     icon: Mail,
@@ -179,8 +176,7 @@ function MeetUs() {
                     <Phone className="h-6 w-6 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-gray-800 font-semibold ">Phone</h3>
-                      <p className="text-gray-600">+91 9892486751</p>
-                      <p className="text-gray-600">+91 9727201001</p>
+                      <p className="text-gray-600">+91 9327508480</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -188,7 +184,6 @@ function MeetUs() {
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">Email</h3>
                       <p className="text-gray-600">bmanish11@gmail.com</p>
-                      <p className="text-gray-600">Jigneshji2005@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
