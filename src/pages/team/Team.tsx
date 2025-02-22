@@ -159,7 +159,7 @@ function Team() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (
               <Card key={index} className="overflow-hidden h-full">
-                <div className="relative h-48 sm:h-40">
+                <div className="relative w-48 h-48 sm:w-40 sm:h-40 mx-auto rounded-full overflow-hidden">
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
