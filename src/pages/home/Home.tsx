@@ -1,4 +1,4 @@
-  import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Users,
   Scale,
@@ -26,6 +26,22 @@ function App() {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
+    Icon,
+    size = "h-16 w-16",
+  }) => (
+    <div className="icon-wrapper">
+      <div className="icon-inner">
+        <div className="icon-front">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+        <div className="icon-back">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+      </div>
+    </div>
+  );
 
   useEffect(() => {
     if (inView) {
@@ -60,24 +76,24 @@ function App() {
     unit?: string;
     label: string;
   }
-
+  
   const StatCard: React.FC<StatCardProps> = ({ value, unit, label }) => (
-    <motion.div
-      whileHover={{ scale: 1.03 }}
-      className="stat-card bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300"
-    >
       <motion.div
-        className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent"
-        animate={{ rotateY: isAnimating ? 360 : 0 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        whileHover={{ scale: 1.03 }}
+        className="stat-card bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300"
       >
-        {value}
-        {unit && <span className="text-4xl ml-1">{unit}</span>}
+        <motion.div
+          className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent"
+          animate={{ rotateY: isAnimating ? 360 : 0 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+        >
+          {value}
+          {unit && <span className="text-4xl ml-1">{unit}</span>}
+        </motion.div>
+        <div className="text-lg md:text-xl mt-3 text-gray-700 font-semibold">
+          {label}
+        </div>
       </motion.div>
-      <div className="text-lg md:text-xl mt-3 text-gray-700 font-semibold">
-        {label}
-      </div>
-    </motion.div>
   );
 
   useEffect(() => {
@@ -130,25 +146,17 @@ function App() {
 
   const slides = [
     {
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
-      title: "Building Tomorrow's Success Stories",
+      image: "https://images.app.goo.gl/QzfaUo1e6sSNC35P6",
+      title: "Navigating Success Together",
       description:
         "We invest in innovative startups and growth companies that are shaping the future of technology and business.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80",
+        "https://unsplash.com/photos/pile-of-gold-coins-with-growing-arrows-and-a-dart-board-on-white-background-financial-growth-goals-financial-planning-and-investment-3d-render-illustration-34mzkeB2iFc",
       title: "Empowering Visionary Founders",
       description:
         "Partner with us to turn your groundbreaking ideas into market-leading companies.",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80",
-      title: "Global Impact, Local Presence",
-      description:
-        "Creating lasting value through strategic investments across markets worldwide.",
     },
   ];
 
@@ -233,7 +241,7 @@ function App() {
                 key={index}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
               >
-                <feature.icon className="h-16 w-16 text-[#2C7C41] mb-6" />
+                <IconWrapper Icon={feature.icon} size="h-16 w-16" />
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
                   {feature.title}
                 </h3>
@@ -268,9 +276,9 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 py-12">
+      <div className="w-full max-w-7xl mx-auto px-4 py-12 bg-white">
         {/* Header Section */}
-        <div className="bg-emerald-600 text-white p-8 rounded-t-lg text-center">
+        <div className="bg-white text-[#2C7C41] p-8 rounded-t-lg text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Investment Strategy
           </h1>
@@ -280,61 +288,25 @@ function App() {
             exchange
           </p>
         </div>
-
-        {/* Strategy Pyramid */}
-        <div className="mt-12 space-y-8">
-          {/* Core Focus Area */}
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/2">
-              <div className="bg-emerald-600 text-white p-8 rounded-lg">
-                <h2 className="text-2xl md:text-3xl font-semibold text-center">
-                  Core Focus Area
-                </h2>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <p className="text-gray-700 text-lg">
-                Identify the most promising and high-potential investment
-                opportunities based on thorough market analysis, industry
-                trends, and evaluation of growth potential of businesses.
-              </p>
-            </div>
+        <div className="w-full px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <img
+              src="/photos/is.jpg"
+              alt="Investment Strategy"
+              className="w-full h-auto object-contain rounded-lg shadow-lg"
+            />
           </div>
-
-          {/* Capital Deployment */}
-          <div className="flex flex-col md:flex-row items-center gap-8 md:pl-12">
-            <div className="w-full md:w-2/5">
-              <div className="bg-lime-500 text-white p-8 rounded-lg">
-                <h2 className="text-2xl md:text-3xl font-semibold text-center">
-                  Capital Deployment
-                </h2>
-              </div>
-            </div>
-            <div className="w-full md:w-3/5">
-              <p className="text-gray-700 text-lg">
-                Efficient capital allocation to maximize returns and minimize
-                risks, following a diversified portfolio approach.
-              </p>
-            </div>
-          </div>
-
-          {/* Hands-On Approach */}
-          <div className="flex flex-col md:flex-row items-center gap-8 md:pl-24">
-            <div className="w-full md:w-1/3">
-              <div className="bg-emerald-700 text-white p-8 rounded-lg">
-                <h2 className="text-2xl md:text-3xl font-semibold text-center">
-                  Hands-On Approach
-                </h2>
-              </div>
-            </div>
-            <div className="w-full md:w-2/3">
-              <p className="text-gray-700 text-lg">
-                Active engagement with portfolio companies, as and when
-                required, providing operational guidance, strategic advice, and
-                access to industry networks to drive growth and value creation.
-              </p>
-            </div>
-          </div>
+        </div>
+        <div className="mt-12 text-center">
+          <a
+            href="/about"
+            className="inline-flex items-center justify-center space-x-3 bg-[#2C7C41] text-white px-8 py-4 rounded-full hover:bg-[#2C7C41]/90 transition-colors hover:text-black duration-300 group"
+          >
+            <span className="text-lg font-semibold hover:text-black">
+              Learn More About Our Strategy
+            </span>
+            <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
         </div>
       </div>
 
@@ -352,7 +324,7 @@ function App() {
           </motion.h2>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="py-1 grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <StatCard value={dealSize} unit="CR" label="DEAL SIZE" />
             <StatCard value={investeeCompanies} label="INVESTEE COMPANIES" />
             <StatCard value={minorityStake} unit="%" label="MINORITY STAKE" />

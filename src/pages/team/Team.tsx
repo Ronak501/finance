@@ -1,3 +1,4 @@
+import React from "react";
 import { Linkedin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -30,15 +31,7 @@ function Team() {
     {
       name: "Dr. A. M. Sherry",
       position: "Advisor",
-      image: "photos/a3.jpg",
-      bio: "DEA Chair Professor (Financial Markets) AJNIFM, Ministry of Finance, Government of India",
-      linkedin:
-        "https://www.linkedin.com/in/dr-a-m-sherry-2877834a/?originalSubdomain=in",
-    },
-    {
-      name: "Dr. A. M. Sherry",
-      position: "Advisor",
-      image: "photos/a3.jpg",
+      image: "photos/a4.jpg",
       bio: "DEA Chair Professor (Financial Markets) AJNIFM, Ministry of Finance, Government of India",
       linkedin:
         "https://www.linkedin.com/in/dr-a-m-sherry-2877834a/?originalSubdomain=in",
@@ -50,14 +43,21 @@ function Team() {
       name: "Mr. Jignesh Lakhani",
       position: "Fund Advisor",
       image: "/photos/lakhani.jpeg",
-      bio: ` 20+ years in healthcare innovation and entrepreneurship Ankush Kumar Jain is a seasoned financial professional with a strong background in investment management. As a Chartered Financial Analyst (CFA) and member of the Institute of Chartered Financial Analysts of India (ICFAI), he brings a wealth of expertise to his role as Fund Manager at ACE Shares Private Ltd, which he joined in 2022.Prior to his current position, Ankush worked at Edelweiss Wealth Management in Ahmedabad as part of the Investment Advisory division, where he focused on the Structured Product and AIF segments. He began his career in 2007 as a Research Analyst at Raghunandan Securities, where he honed his skills in commodities and currencies. With 12 years of experience in the Indian equity markets, Ankush has developed a deep understanding of fundamental, technical, and derivative strategies.Ankush holds a B.Com degree from St. John's College, Agra University, which he earned in 2007. He is also a SEBI Registered Investment Advisor (Registration No. INA000012041), having obtained his registration in November 2018. Ankush's expertise and experience make him a valuable asset to the ACE Shares team, where he leverages his extensive knowledge to help clients achieve their investment goals.`,
+      bio : `Jignesh Jasmatbhai Lakhani is a seasoned professional in the capital markets industry, bringing over 20 years of extensive experience to the table. His career trajectory highlights a wealth of knowledge and hands-on expertise across various segments of the stock broking business.
+• 2002 – 2005: Began his career as a dealer in Surat, working with a sub-broker of Religare Broking.
+• 2006 – 2009: Transitioned to becoming a sub-broker for Master Trust under his own name.
+• 2009 – 2014: Founded Aashar Capital Pvt. Ltd., operating as a sub-broker for Master Capital Services under the name Aashar Capital Services Pvt. Ltd.
+• 2014 – 2024: Aashar Capital continued to operate as an Authorized Person of 
+Master Capital Services, handling stockbroking operations.
+In recent times, Aashar Capital has ceased all broking and sub-broking activities. As of the date of this application, the company is no longer involved in stockbroking operations.Mr. Jignesh Lakhani has served as the Promoter and Managing Director of Aashar Capital Services Private Limited since its inception in 2009. Throughout his career, he has successfully managed the full spectrum of broking operations, including client acquisition and retention, market research and analysis, and regulatory compliance.His extensive experience also extends to providing tailored investment advice, assessing clients' risk profiles, and conducting educational seminars to enhance investor knowledge on market trends and strategies.Currently, Aashar Capital is shifting its focus towards advisory, and growth consulting services aimed at small and medium-sized enterprises (SMEs).In addition to his professional accomplishments, Mr. Lakhani holds an NISM certification in Equity Derivatives and has completed his Higher Secondary Certificate (H.S.C.) from the Gujarat State Board.`,
       linkedin: "https://www.linkedin.com/in/jignesh-lakhani-806550b1/",
     },
     {
       name: "Mr. Manish Bansal",
       position: "Fund Advisor",
       image: "/photos/bansal.jpeg",
-      bio:  ` 25+ years of experience in Financial Markets Kresha Gupta is a highly qualified and experienced Chartered Accountant (CA) and a member of the Institute of Chartered Accountants of India (ICAI). She has a distinguished academic record and has gained significant expertise in the field through her management and consulting experience.Kresha's extensive experience spans across both corporate and consulting roles in Finance, Accounts, MIS, Tax Advisory, Investor Relations, Treasury, and other areas. Prior to founding Gupta KK & Associates, Kresha worked with Vodafone Idea Limited, where she held the position of Assistant General Manager and was responsible for Investor Relations and Treasury, reporting directly to the Chief Financial Officer.At Gupta KK & Associates, Kresha spearheads an integrated one-stop service firm that offers end-to-end solutions in Equity & Debt Management, Fund Raising, and other related areas. With her deep understanding of equity and debt instruments, Kresha manages a diversified portfolio of equities and other debt instruments for her clients.`,
+      bio: ` Manish Kumar Bansal is a finance professional with over 28 years of experience across various roles in equity research, regulatory bodies, banking, investment banking, and consulting.
+Manish is serving as a part-time consultant for the Department of Economic Affairs, Ministry of Finance, India, where he contributes to research aimed at enhancing the efficiency of Indian financial markets. Additionally, he has held senior roles at Citibank, where he was instrumental in establishing the commodity derivatives business in India, and at the Securities and Exchange Board of India (SEBI), where he contributed to the development of equity derivatives markets and other key financial innovations.Manish holds an M.S. in Finance from the Robert H. Smith School of Business, University of Maryland, a Chartered Financial Analyst (CFA) designation from the Institute of Chartered Financial Analysts of India, and an MBA from Faculty of Management Studies, Saugar University`,
       linkedin: "https://www.linkedin.com/in/manish-bansal-bb711117/",
     },
   ];
@@ -124,7 +124,12 @@ function Team() {
                         {advisor.position}
                       </h4>
                       <p className="text-muted-foreground mb-6">
-                        {advisor.bio}
+                        {advisor.bio.split("\n").map((line, index) => (
+                          <React.Fragment key={index}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
                       </p>
                       <a
                         href={advisor.linkedin}
@@ -156,7 +161,7 @@ function Team() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (
               <Card key={index} className="overflow-hidden h-full">
                 <div className="relative w-48 h-48 sm:w-40 sm:h-40 mx-auto rounded-full overflow-hidden">

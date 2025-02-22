@@ -1,4 +1,69 @@
-import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight, Trophy } from "lucide-react";
+import { Card } from "@/components/ui/card";
+
+type ContactInfo = {
+  icon: typeof Mail | typeof MapPin | typeof Phone;
+  title: string;
+  details: string[];
+};
+
+const contactInformation: ContactInfo[] = [
+  {
+    icon: MapPin,
+    title: "Office Location",
+    details: [
+      "3rd Floor, Barcelona House, Opp-Shellpump Road,",
+      "Prahladnagar, Ahmedabad – 380015, Gujarat, India",
+    ],
+  },
+  {
+    icon: Phone,
+    title: "Calling Support",
+    details: ["Toll Free: 1800 571 2929", "Mobile: 97273 71142"],
+  },
+  {
+    icon: Mail,
+    title: "Email Information",
+    details: ["info@chanakyafund.com"],
+  },
+];
+
+function ContactCard({ info }: { info: ContactInfo }) {
+  const Icon = info.icon;
+
+  const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
+    Icon,
+    size = "h-24 w-24",
+  }) => (
+    <div className="icon-wrapper">
+      <div className="icon-inner">
+        <div className="icon-front">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+        <div className="icon-back">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <Card className="p-8 relative group overflow-hidden transition-all duration-500 hover:shadow-xl">
+      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -translate-x-full group-hover:translate-x-full" />
+      <div className="relative">
+        <div className="w-24 h-24 mx-auto mb-6 transition-transform duration-500 group-hover:scale-110">
+          <IconWrapper Icon={Icon} size="h-24 w-24" />
+        </div>
+        <h3 className="text-xl font-semibold text-center mb-4">{info.title}</h3>
+        <div className="text-center text-gray-600">
+          {info.details.map((detail, index) => (
+            <p key={index}>{detail}</p>
+          ))}
+        </div>
+      </div>
+    </Card>
+  );
+}
 
 function MeetUs() {
   return (
@@ -99,7 +164,7 @@ function MeetUs() {
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <MapPin className="h-8 w-8 text-[#2C7C41] mt-1" />
+                    <MapPin className="h-6 w-6 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">
                         Office Location
@@ -111,7 +176,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Phone className="h-8 w-8 text-[#2C7C41] mt-1" />
+                    <Phone className="h-6 w-6 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-gray-800 font-semibold ">Phone</h3>
                       <p className="text-gray-600">+91 9892486751</p>
@@ -119,7 +184,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-8 w-8 text-[#2C7C41] mt-1" />
+                    <Mail className="h-6 w-6 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">Email</h3>
                       <p className="text-gray-600">bmanish11@gmail.com</p>
@@ -127,7 +192,7 @@ function MeetUs() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Clock className="h-8 w-8 text-[#2C7C41] mt-1" />
+                    <Clock className="h-6 w-6 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">
                         Office Hours
@@ -164,49 +229,24 @@ function MeetUs() {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our investment process
-            </p>
+      <div className="py-20 bg-gray-50 px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center space-x-2 bg-green-50 px-4 py-2 rounded-full mb-4">
+            <span className="text-[#2C7C41] font-medium">
+              SMART STRATEGIES, SMARTER FINANCES
+            </span>
+            <Trophy className="h-5 w-5 text-[#2C7C41]" />
           </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+            Take Your Finances to the Next Level
+          </h2>
+          <p className="text-xl text-gray-600">Connect with Us Today!</p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                question: "What is your typical investment size?",
-                answer:
-                  "Our investments typically range from $1M to $10M, depending on the stage and needs of the company.",
-              },
-              {
-                question: "What sectors do you invest in?",
-                answer:
-                  "We focus on technology, healthcare, fintech, and other innovative sectors with high growth potential.",
-              },
-              {
-                question: "How long does the investment process take?",
-                answer:
-                  "The typical process takes 8-12 weeks from initial meeting to closing, depending on due diligence requirements.",
-              },
-              {
-                question: "What stage companies do you invest in?",
-                answer:
-                  "We invest in early to growth-stage companies with proven market traction and strong growth potential.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-gray-800 text-lg font-semibold mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contactInformation.map((info, index) => (
+            <ContactCard key={index} info={info} />
+          ))}
         </div>
       </div>
     </div>

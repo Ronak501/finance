@@ -4,16 +4,31 @@ import {
   Newspaper,
   Video,
   Podcast,
-  Download,
   ExternalLink,
 } from "lucide-react";
 import CAGRBarChart from "./CAGRBarChart";
 
 function Resources() {
+  const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
+    Icon,
+    size = "h-14 w-14",
+  }) => (
+    <div className="icon-wrapper">
+      <div className="icon-inner">
+        <div className="icon-front">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+        <div className="icon-back">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+      </div>
+    </div>
+  );
+
   const resources = [
     {
       category: "Research Reports",
-      icon: <FileText className="h-14 w-14 text-[#2C7C41] mb-4" />,
+      icon: <IconWrapper Icon={FileText} />,
       items: [
         {
           title: "State of SaaS in 2024",
@@ -31,7 +46,7 @@ function Resources() {
     },
     {
       category: "Blog Posts",
-      icon: <BookOpen className="h-14 w-14 text-[#2C7C41] mb-4" />,
+      icon: <IconWrapper Icon={BookOpen} />,
       items: [
         {
           title: "Building Resilient Startups",
@@ -47,7 +62,7 @@ function Resources() {
     },
     {
       category: "News & Updates",
-      icon: <Newspaper className="h-14 w-14 text-[#2C7C41] mb-4" />,
+      icon: <IconWrapper Icon={Newspaper} />,
       items: [
         {
           title: "Q1 2024 Investment Highlights",
@@ -59,7 +74,7 @@ function Resources() {
     },
     {
       category: "Video Content",
-      icon: <Video className="h-14 w-14 text-[#2C7C41] mb-4" />,
+      icon: <IconWrapper Icon={Video} />,
       items: [
         {
           title: "Founder Stories Series",
@@ -70,7 +85,7 @@ function Resources() {
     },
     {
       category: "Podcasts",
-      icon: <Podcast className="h-14 w-14 text-[#2C7C41] mb-4" />,
+      icon: <IconWrapper Icon={Podcast} />,
       items: [
         {
           title: "VentureFund Insights",
@@ -137,36 +152,10 @@ function Resources() {
         </div>
       </div>
 
-      {/*graph section*/}
+      {/* Graph Section */}
       <div className="py-20 m-auto align-center bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CAGRBarChart />
-        </div>
-      </div>
-
-      {/* Newsletter Section */}
-      <div className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-800">
-              Stay Updated
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Subscribe to our newsletter to receive the latest insights,
-              reports, and updates directly in your inbox.
-            </p>
-            <div className="flex max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2C7C41]"
-              />
-              <button className="bg-[#2C7C41] text-white px-6 py-3 rounded-r-lg hover:bg-[#15b5d8] transition-colors flex items-center">
-                Subscribe
-                <Download className="h-4 w-4 ml-2" />
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -1,11 +1,4 @@
-import {
-  BarChart2,
-  PieChart,
-  ChartNoAxesCombined,
-  HeartHandshake,
-  BookType,
-  Clock,
-} from "lucide-react";
+import { BarChart2, PieChart, Combine as ChartNoAxesCombined, HeartHandshake, BookType, Clock } from "lucide-react";
 
 function Fund() {
   const fundStats = [
@@ -21,7 +14,7 @@ function Fund() {
       icon: ChartNoAxesCombined,
     },
     {
-      label: "Sponsor’s contribution",
+      label: "Sponsor's contribution",
       value:
         "Sponsors to invest minimum 2.5% of the fund size or Rs. 5 Cr., whichever is lower, as prescribed by regulations",
       icon: HeartHandshake,
@@ -59,8 +52,22 @@ function Fund() {
       description: "Demonstrated market validation and growth metrics",
     },
   ];
+  const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({ Icon, size = "h-16 w-16" }) => (
+
+    <div className="icon-wrapper">
+      <div className="icon-inner">
+        <div className="icon-front">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+        <div className="icon-back">
+          <Icon className={`${size} text-[#2C7C41]`} />
+        </div>
+      </div>
+    </div>
+  );
 
   return (
+    
     <div className="pt-16">
       {/* Hero Section */}
       <div className="relative h-[400px]">
@@ -81,8 +88,8 @@ function Fund() {
         </div>
       </div>
 
-      {/* Fund Stats */}
-      <div className="py-20 bg-white">
+        {/* Fund Stats */}
+        <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {fundStats.map((stat, index) => (
@@ -90,8 +97,8 @@ function Fund() {
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <stat.icon className="h-16 w-16 text-[#2C7C41] mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900">
+                <IconWrapper Icon={stat.icon} size="h-16 w-16"/>
+                <h3 className="text-lg font-semibold text-gray-900 mt-4">
                   {stat.label}
                 </h3>
                 <p className="text-1xl text-gray-800 mt-2">{stat.value}</p>
