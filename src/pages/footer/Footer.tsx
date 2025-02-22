@@ -55,15 +55,6 @@ function Footer() {
               </li>
               <li className="flex items-center">
                 <ChevronsRight />
-                <Link
-                  to="/smeexchange"
-                  className="text-gray-400 hover:text-white"
-                >
-                  SME Exchange
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <ChevronsRight />
                 <Link to="/contact" className="text-gray-400 hover:text-white">
                   Contact
                 </Link>
@@ -80,12 +71,12 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/smeexchange" className="text-gray-400 hover:text-white">
+                <a href="/" className="text-gray-400 hover:text-white">
                   Nifty SME Emerge
                 </a>
               </li>
               <li>
-                <a href="/smeexchange" className="text-gray-400 hover:text-white">
+                <a href="/" className="text-gray-400 hover:text-white">
                   BSE SME IPO Index
                 </a>
               </li>

@@ -40,12 +40,6 @@ function Header() {
                 TEAM
               </NavLink>
               <NavLink
-                to="/smeexchange"
-                className="text-gray-700 hover:text-[#2C7C41]"
-              >
-                SME EXCHANGE
-              </NavLink>
-              <NavLink
                 to="/contact"
                 className="text-gray-700 hover:text-[#2C7C41]"
               >

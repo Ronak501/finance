@@ -1,15 +1,16 @@
   import { useState, useEffect } from "react";
 import {
   Users,
-  BarChart2,
-  Globe,
+  Scale,
+  HandCoins,
   ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import "./TargetPortfolioCharacteristics.css";
 import NiftyIndicesBarGraph from "./NiftyIndicesBarGraph";
+import NiftySMEEmergeGraph from "./NiftySMEEmergeGraph";
+import NiftySMEIpoGraph from "./NiftySMEIpoGraph";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0); 
@@ -18,6 +19,66 @@ function App() {
   const [minorityStakeInvestment, setMinorityStakeInvestment] = useState(0);
   const [sponsorCommitment, setSponsorCommitment] = useState(0);
   const [fundManagerCommitment, setFundManagerCommitment] = useState(0);
+  const [minorityStake, setMinorityStake] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setIsAnimating(true);
+      const duration = 2000; // 2 seconds
+      const steps = 50;
+      const interval = duration / steps;
+
+      let step = 0;
+      const timer = setInterval(() => {
+        step++;
+        const progress = step / steps;
+
+        setDealSize(Math.floor(progress * 100));
+        setInvesteeCompanies(Math.floor(progress * 25));
+        setMinorityStake(Math.floor(progress * 49));
+        setSponsorCommitment(Math.floor(progress * 20));
+        setFundManagerCommitment(Math.floor(progress * 15));
+
+        if (step === steps) {
+          clearInterval(timer);
+          setIsAnimating(false);
+        }
+      }, interval);
+
+      return () => clearInterval(timer);
+    }
+  }, [inView]);
+
+  interface StatCardProps {
+    value: number;
+    unit?: string;
+    label: string;
+  }
+
+  const StatCard: React.FC<StatCardProps> = ({ value, unit, label }) => (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      className="stat-card bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300"
+    >
+      <motion.div
+        className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent"
+        animate={{ rotateY: isAnimating ? 360 : 0 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+      >
+        {value}
+        {unit && <span className="text-4xl ml-1">{unit}</span>}
+      </motion.div>
+      <div className="text-lg md:text-xl mt-3 text-gray-700 font-semibold">
+        {label}
+      </div>
+    </motion.div>
+  );
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -46,6 +107,26 @@ function App() {
     sponsorCommitment,
     fundManagerCommitment,
   ]);
+
+  const features = [
+    {
+      icon: HandCoins,
+      title: "Fund Objective",
+      description:
+        "Provide growth capital and strategic support to small and medium enterprises (SMEs) and help investors build wealth",
+    },
+    {
+      icon: Scale,
+      title: "Regulatory Status",
+      description:
+        "SEBI registered investment vehicle SEBI Registration no. –IN/AIF1/24-25/1676",
+    },
+    {
+      icon: Users,
+      title: "Key Stakeholders",
+      description: "Investors Investee Companies Investment Manager/Sponsor",
+    },
+  ];
 
   const slides = [
     {
@@ -134,48 +215,54 @@ function App() {
       </div>
 
       {/* Features Section */}
-      <div className="py-24 bg-gray-50">
+      <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Us
+              Overview of INFIPLY SME Growth Fund
             </h2>
-            <p className="text-xl text-gray-600 mb-12">
-              We bring more than just capital to the table
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive tools and services to facilitate successful business
+              transactions
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Users className="h-16 w-16 text-[#2C7C41] mb-4" />
-              <h3 className="text-gray-800 text-xl font-semibold mb-2">
-                Expert Team
-              </h3>
-              <p className="text-gray-600">
-                High Experience In Primary Markets
-              </p>
-              <p className="text-gray-600">Experience In SME Stock Exchange</p>
-            </div>
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+              >
+                <feature.icon className="h-16 w-16 text-[#2C7C41] mb-6" />
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <BarChart2 className="h-16 w-16 text-[#2C7C41] mb-4" />
-              <h3 className="text-gray-800 text-xl font-semibold mb-2">
-                Strategic Growth
-              </h3>
-              <p className="text-gray-600">
-                Understanding Risk Appetites/Management
-              </p>
-              <p className="text-gray-600">Flexibility And Adaptability</p>
+      {/* Stats Section */}
+      <div className="bg-[#2C7C41] py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
+            <div>
+              <div className="text-4xl font-bold mb-2">$500M+</div>
+              <div className="text-lg">Assets Under Management</div>
             </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <Globe className="h-16 w-16 text-[#2C7C41] mb-4" />
-              <h3 className="text-gray-800 text-xl font-semibold mb-2">
-                Global Network
-              </h3>
-              <p className="text-gray-600">
-                Sponsor And Fund Managers "Skin In The Game"
-              </p>
+            <div>
+              <div className="text-4xl font-bold mb-2">100+</div>
+              <div className="text-lg">Portfolio Companies</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">15+</div>
+              <div className="text-lg">Years Experience</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold mb-2">25+</div>
+              <div className="text-lg">Countries</div>
             </div>
           </div>
         </div>
@@ -252,83 +339,55 @@ function App() {
       </div>
 
       {/* TPC Section */}
-      <div className="container h-[640px] mt-20 align-center m-auto">
-        <div className="header text-black">
-          <span className="title text-4xl text-black-900 font-bold">
+      <div ref={ref} className="bg-gradient-to-b from-white to-gray-100 py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Main Title */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-12"
+          >
             Target Portfolio Characteristics
-          </span>
-        </div>
+          </motion.h2>
 
-        <div className="stats bg-white text-black mt-20">
-          <div className="stat">
-            <div className="value text-9xl">
-              <span className="value">{dealSize}</span>
-              <span className="unit">CR</span>
-            </div>
-            <span className="label text-2xl">DEAL SIZE</span>
+          {/* Stats Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <StatCard value={dealSize} unit="CR" label="DEAL SIZE" />
+            <StatCard value={investeeCompanies} label="INVESTEE COMPANIES" />
+            <StatCard value={minorityStake} unit="%" label="MINORITY STAKE" />
           </div>
 
-          <div className="stat">
-            <div className="value text-8xl">
-              <span className="value">{investeeCompanies}</span>
-            </div>
-            <span className="label text-2xl">INVESTEE COMPANIES</span>
-          </div>
-
-          <div className="stat">
-            <div className="value text-8xl">
-              <span className="value">{minorityStakeInvestment}%</span>
-            </div>
-            <span className="label text-2xl">MINORITY STAKE INVESTMENT</span>
-          </div>
-        </div>
-
-        <div className="header text-black mt-20">
-          <span className="title text-4xl font-bold text-black">
+          {/* Second Title */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-emerald-700 to-emerald-900 bg-clip-text text-transparent mb-12"
+          >
             We Have Skin In The Game
-          </span>
-        </div>
+          </motion.h2>
 
-        <div className="commitments bg-white text-black mt-20">
-          <div className="commitment">
-            <div className="value text-8xl">
-              <span className="value">{sponsorCommitment}</span>
-              <span className="unit">CR</span>
-            </div>
-            <span className="label">SPONSOR COMMITMENT</span>
-          </div>
-
-          <div className="commitment">
-            <div className="value text-8xl">
-              <span className="value">{fundManagerCommitment}</span>
-              <span className="unit">CR</span>
-            </div>
-            <span className="label">FUND MANAGER COMMITMENT</span>
+          {/* Commitments Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <StatCard
+              value={sponsorCommitment}
+              unit="CR"
+              label="SPONSOR COMMITMENT"
+            />
+            <StatCard
+              value={fundManagerCommitment}
+              unit="CR"
+              label="FUND MANAGER COMMITMENT"
+            />
           </div>
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="bg-[#2C7C41] py-20">
+      {/* Graphical Representation */}
+      <div className="py-20 m-auto align-center bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">$500M+</div>
-              <div className="text-lg">Assets Under Management</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">100+</div>
-              <div className="text-lg">Portfolio Companies</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">15+</div>
-              <div className="text-lg">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">25+</div>
-              <div className="text-lg">Countries</div>
-            </div>
-          </div>
+          <NiftySMEEmergeGraph />
         </div>
       </div>
 
@@ -339,47 +398,9 @@ function App() {
         </div>
       </div>
 
-      {/* Contact Section */}
-      <div className="py-24 bg-white">
+      <div className="py-20 m-auto align-center bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-gray-600">
-              Let's discuss how we can help your business grow
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center space-x-4">
-              <Phone className="h-6 w-6 text-[#2C7C41]" />
-              <div>
-                <h3 className="text-gray-800 font-semibold">Call Us</h3>
-                <p className="text-gray-600">+91 9892486751</p>
-                <p className="text-gray-600">+91 9727201001</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <Mail className="h-6 w-6 text-[#2C7C41]" />
-              <div>
-                <h3 className="text-gray-800 font-semibold">Email Us</h3>
-                <p className="text-gray-600">bmanish11@gmail.com</p>
-                <p className="text-gray-600">Jigneshji2005@gmail.com</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <MapPin className="h-6 w-6 text-[#2C7C41]" />
-              <div>
-                <h3 className="text-gray-800 font-semibold">Visit Us</h3>
-                <p className="text-gray-600">
-                  06, Nathubhai Tower, Udhna Main Road Surat, Gujrat, 394210
-                </p>
-              </div>
-            </div>
-          </div>
+          <NiftySMEIpoGraph />
         </div>
       </div>
     </div>

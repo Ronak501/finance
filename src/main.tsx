@@ -4,7 +4,6 @@ import About from "./pages/about/About";
 import Resources from "./pages/resources/Resources";
 import MeetUs from "./pages/contact/MeetUs";
 import Team from "./pages/team/Team";
-import SmeExchange from "./pages/smeexchange/SmeExchange";
 import Fund from "./pages/fund/Fund";
 import ScrollToTop from "./pages/ScrollToTop";
 import Layout from "./Layout";
@@ -25,7 +24,6 @@ const AppRouter = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<MeetUs />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/smeexchange" element={<SmeExchange />} />
           <Route path="/fund" element={<Fund />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
