@@ -1,4 +1,11 @@
-import { TrendingUp, Phone, Mail, MapPin, ChevronsRight } from "lucide-react";
+import {
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  BookCheck,
+  ChevronsRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -72,8 +79,8 @@ function Footer() {
               including lack of liquidity. Please refer to the “Risk Factors”
               section of this memorandum before investing. Unauthorized
               reproduction or distribution of this document is prohibited. This
-              is not a public offering, and neither this document nor the fund&apos;s
-              units have been registered under applicable laws.
+              is not a public offering, and neither this document nor the
+              fund&apos;s units have been registered under applicable laws.
             </p>
           </div>
 
@@ -96,13 +103,22 @@ function Footer() {
             </div>
 
             <div className="flex items-center space-x-4 space-y-2">
+              <BookCheck className="h-6 w-6 text-[#2C7C41] mt-3" />
+              <div>
+                <p className="text-gray-400 hover:text-white">
+                  Registration no. –IN/AIF1/24-25/1676
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4 space-y-2">
               <MapPin className="h-6 w-6 text-[#2C7C41]" />
               <div>
                 <p className="text-gray-400 hover:text-white">
-                  606-607, Nathubhai Tower, Udhna
+                  606-607, Nathubhai Tower, Udhna Main
                 </p>
                 <p className="text-gray-400 hover:text-white">
-                  Main Road, Surat, Gujrat, 394210
+                  Road, Surat, Gujrat, 394210
                 </p>
               </div>
             </div>

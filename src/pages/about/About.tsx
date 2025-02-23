@@ -107,6 +107,43 @@ export default function About() {
     },
   ];
 
+  const values = [
+    {
+      icon: Users,
+      color: "bg-red-400",
+      title: "Investors First",
+      description:
+        "We feel responsible towards our investors for trusting us with their money",
+    },
+    {
+      icon: Scale,
+      color: "bg-blue-400",
+      title: "Compliance Orientation",
+      description: "We will follow laws both in words and spirit",
+    },
+    {
+      icon: ArrowUpRight,
+      color: "bg-green-400",
+      title: "Long term Approach",
+      description:
+        "We will act like part owners of the businesses and not just the external investors",
+    },
+    {
+      icon: UmbrellaOff,
+      color: "bg-indigo-400",
+      title: "Risk Management",
+      description:
+        "Appropriate diversification, due diligence on each opportunity and continuous monitoring post investment",
+    },
+    {
+      icon: Search,
+      color: "bg-yellow-400",
+      title: "Transparency",
+      description:
+        "We will act with utmost integrity in every aspect of our business and communicate with all stake holders with absolute transparency.",
+    },
+  ];
+
   return (
     <div className="min-h-screen w-full bg-white">
       <div className="pt-16">
@@ -318,6 +355,31 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
+
+       <div className="py-16 mid:py-24 px-4 mid:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <p className="text-lg mid:text-xl text-gray-600 max-w-3xl mx-auto">
+              These core values guide our actions and define who we are as an organization
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 mid:grid-cols-2x lg:grid-cols-3 gap-6 mid:gap-8 lg:gap-12 max-w-7xl mx-auto">
+            {values.map((value, index) => (
+              <div key={index} className="flex flex-col items-center text-center group">
+                <div className={`w-16 h-16 mid:w-20 mid:h-20 lg:w-24 lg:h-24 rounded-full ${value.color} flex items-center justify-center mb-4 transform transition-transform group-hover:scale-110`}>
+                  <value.icon className="w-8 h-8 mid:w-10 mid:h-10 lg:w-12 lg:h-12 text-white" />
+                </div>
+                <h3 className="text-lg mid:text-xl lg:text-2xl font-semibold text-gray-900 mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-sm mid:text-base text-gray-600">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
   );
 }

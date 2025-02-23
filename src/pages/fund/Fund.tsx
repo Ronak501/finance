@@ -1,5 +1,47 @@
+import React from 'react';
 import { BarChart2, PieChart, Combine as ChartNoAxesCombined, HeartHandshake, BookType, Clock } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { GraduationCap, Users, Heart, Puzzle as PuzzlePiece } from 'lucide-react';
+
+function ImpactCard({ title, icon: Icon, description, isGreen }: {
+  title: string;
+  icon: React.ElementType;
+  description: string;
+  isGreen: boolean;
+}) {
+  return (
+    <div 
+      className={`p-8 relative group overflow-hidden ${
+        isGreen ? 'bg-[#2C7C41] text-white' : 'bg-white text-[#2C7C41]'
+      }`}
+    >
+      {/* Hover corner effects */}
+      <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none ${
+        isGreen ? 'bg-[#1f5c30]' : 'bg-gray-100'
+      }`}>
+        <div className="absolute top-0 left-0 w-16 h-16 bg-black/10" />
+        <div className="absolute top-0 right-0 w-16 h-16 bg-black/10" />
+        <div className="absolute bottom-0 left-0 w-16 h-16 bg-black/10" />
+        <div className="absolute bottom-0 right-0 w-16 h-16 bg-black/10" />
+      </div>
+      
+      {/* Card content */}
+      <div className="text-center space-y-6 relative z-10">
+        <div className="relative w-32 h-32 mx-auto">
+          <div className={`absolute inset-0 border-2 border-dashed ${isGreen ? 'border-white/30' : 'border-[#2C7C41]/30'} rounded-full`} />
+          <div className={`absolute inset-2 ${isGreen ? 'bg-[#2C7C41]' : 'bg-white'} rounded-full flex items-center justify-center`}>
+            <Icon className={`w-16 h-16 ${isGreen ? 'text-white' : 'text-[#2C7C41]'}`} strokeWidth={1.5} />
+          </div>
+        </div>
+        <h2 className="text-xl font-bold leading-tight min-h-[60px]">
+          {title}
+        </h2>
+        <p className="text-sm opacity-80">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function Fund() {
   const fundStats = [
@@ -35,8 +77,30 @@ function Fund() {
     },
   ];
 
-  const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({ Icon, size = "h-16 w-16" }) => (
+  const riskFactors = [
+    {
+      title: "INCREASED KNOWLEDGE & SKILLS",
+      icon: GraduationCap,
+      description: "Lorem ipsum dolor sit dim amet, mea regione diamet principes at."
+    },
+    {
+      title: "COMMUNITY MEMBERS EMPOWERMENT",
+      icon: Users,
+      description: "Lorem ipsum dolor sit dim amet, mea regione diamet principes at."
+    },
+    {
+      title: "ENHANCED SOCIAL INCLUSION",
+      icon: Heart,
+      description: "Lorem ipsum dolor sit dim amet, mea regione diamet principes at."
+    },
+    {
+      title: "SOCIAL COHESION",
+      icon: PuzzlePiece,
+      description: "Lorem ipsum dolor sit dim amet, mea regione diamet principes at."
+    }
+  ];
 
+  const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({ Icon, size = "h-16 w-16" }) => (
     <div className="icon-wrapper">
       <div className="icon-inner">
         <div className="icon-front">
@@ -79,7 +143,7 @@ function Fund() {
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <IconWrapper Icon={stat.icon} size="h-16 w-16" />
+                <IconWrapper Icon={stat.icon} size="h-16 w-16"/>
                 <h3 className="text-lg font-semibold text-gray-900 mt-4">
                   {stat.label}
                 </h3>
@@ -89,58 +153,26 @@ function Fund() {
           </div>
         </div>
       </div>
-      <section className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Our Support Partners
+
+      {/* Risk Factors */}
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-[#2C7C41] mb-12">
+            Risk Factors
           </h2>
-          <div className="grid gap-8 md:grid-cols-5">
-            {[
-              {
-                name: "Vistra ITCL",
-                role: "Fund Trustee",
-                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
-              },
-              {
-                name: "KVU & Associates",
-                role: "Tax Advisor",
-                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
-              },
-              {
-                name: "One Stop Consultants",
-                role: "Legal Advisor",
-                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
-              },
-              {
-                name: "HDFC Bank",
-                role: "Fund Banker",
-                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
-              },
-              {
-                name: "ICICI Bank",
-                role: "Fund Custodian",
-                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
-              },
-            ].map((partner) => (
-              <Card key={partner.name} className="text-center">
-                <CardContent className="pt-6">
-                  <img
-                    src={partner.logo || "/placeholder.svg"}
-                    alt={partner.name}
-                    width={150}
-                    height={60}
-                    className="mx-auto mb-4"
-                  />
-                  <h3 className="font-semibold mb-1">{partner.name}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {partner.role}
-                  </p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-4">
+            {riskFactors.map((factor, index) => (
+              <ImpactCard
+                key={index}
+                title={factor.title}
+                icon={factor.icon}
+                description={factor.description}
+                isGreen={index % 2 === 0}
+              />
             ))}
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
