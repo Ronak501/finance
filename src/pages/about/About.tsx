@@ -32,38 +32,6 @@ export default function About() {
     </div>
   );
 
-  const characteristics = [
-    {
-      icon: Users,
-      title: "Investors First",
-      description:
-        "We feel responsible towards our investors for trusting us with their money",
-    },
-    {
-      icon: Scale,
-      title: "Compliance Orientation",
-      description: "We will follow laws both in words and spirit",
-    },
-    {
-      icon: ArrowUpRight,
-      title: "Long term Approach",
-      description:
-        "We will act like part owners of the businesses and not just the external investors",
-    },
-    {
-      icon: UmbrellaOff,
-      title: "Risk Management",
-      description:
-        "Appropriate diversification, due diligence on each opportunity and continuous monitoring post investment",
-    },
-    {
-      icon: Search,
-      title: "Transparency",
-      description:
-        "We will act with utmost integrity in every aspect of our business and communicate with all stake holders with absolute transparency.",
-    },
-  ];
-
   const targetProfile = [
     {
       title: "Owner Managers\nwith skin in the game",
@@ -321,44 +289,9 @@ export default function About() {
         </div>
       </div>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <div className="py-16 mid:py-24 px-4 mid:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Value System
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We carefully evaluate potential investments against these key
-              characteristics to ensure long-term value creation and sustainable
-              growth.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {characteristics.map((item, i) => (
-              <div
-                key={i}
-                className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-              >
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center group-hover:bg-emerald-600 transition-colors duration-300">
-                    <item.icon className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {item.title}
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-       <div className="py-16 mid:py-24 px-4 mid:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Values System</h2>
             <p className="text-lg mid:text-xl text-gray-600 max-w-3xl mx-auto">
               These core values guide our actions and define who we are as an organization
             </p>

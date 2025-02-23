@@ -50,7 +50,7 @@ function Footer() {
               </li>
               <li className="flex items-center">
                 <ChevronsRight />
-                <Link to="/fund" className="text-gray-400 hover:text-white">
+                <Link to="/funddetails" className="text-gray-400 hover:text-white">
                   Fund Details
                 </Link>
               </li>

@@ -24,7 +24,7 @@ const AppRouter = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<MeetUs />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/fund" element={<Fund />} />
+          <Route path="/funddetails" element={<Fund />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Route>

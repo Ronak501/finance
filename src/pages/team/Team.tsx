@@ -41,7 +41,7 @@ function Team() {
   const advisors = [
     {
       name: "Mr. Jignesh Lakhani",
-      position: "Fund Advisor",
+      position: "Fund Sponsor",
       image: "/photos/lakhani.jpeg",
       bio : `Jignesh Jasmatbhai Lakhani is a seasoned professional in the capital markets industry, bringing over 20 years of extensive experience to the table. His career trajectory highlights a wealth of knowledge and hands-on expertise across various segments of the stock broking business.
 • 2002 – 2005: Began his career as a dealer in Surat, working with a sub-broker of Religare Broking.
@@ -54,7 +54,7 @@ In recent times, Aashar Capital has ceased all broking and sub-broking activitie
     },
     {
       name: "Mr. Manish Bansal",
-      position: "Fund Advisor",
+      position: "Fund Sponsor",
       image: "/photos/bansal.jpeg",
       bio: ` Manish Kumar Bansal is a finance professional with over 28 years of experience across various roles in equity research, regulatory bodies, banking, investment banking, and consulting.
 Manish is serving as a part-time consultant for the Department of Economic Affairs, Ministry of Finance, India, where he contributes to research aimed at enhancing the efficiency of Indian financial markets. Additionally, he has held senior roles at Citibank, where he was instrumental in establishing the commodity derivatives business in India, and at the Securities and Exchange Board of India (SEBI), where he contributed to the development of equity derivatives markets and other key financial innovations.Manish holds an M.S. in Finance from the Robert H. Smith School of Business, University of Maryland, a Chartered Financial Analyst (CFA) designation from the Institute of Chartered Financial Analysts of India, and an MBA from Faculty of Management Studies, Saugar University`,
