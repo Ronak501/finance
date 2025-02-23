@@ -1,4 +1,5 @@
 import { BarChart2, PieChart, Combine as ChartNoAxesCombined, HeartHandshake, BookType, Clock } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 function Fund() {
   const fundStats = [
@@ -34,24 +35,6 @@ function Fund() {
     },
   ];
 
-  const investmentCriteria = [
-    {
-      title: "Market Opportunity",
-      description: "Large addressable market with significant growth potential",
-    },
-    {
-      title: "Team",
-      description: "Experienced founders with deep domain expertise",
-    },
-    {
-      title: "Product",
-      description: "Innovative solution addressing clear market need",
-    },
-    {
-      title: "Traction",
-      description: "Demonstrated market validation and growth metrics",
-    },
-  ];
   const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({ Icon, size = "h-16 w-16" }) => (
 
     <div className="icon-wrapper">
@@ -67,7 +50,6 @@ function Fund() {
   );
 
   return (
-    
     <div className="pt-16">
       {/* Hero Section */}
       <div className="relative h-[400px]">
@@ -88,8 +70,8 @@ function Fund() {
         </div>
       </div>
 
-        {/* Fund Stats */}
-        <div className="py-20 bg-white">
+      {/* Fund Stats */}
+      <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {fundStats.map((stat, index) => (
@@ -97,7 +79,7 @@ function Fund() {
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <IconWrapper Icon={stat.icon} size="h-16 w-16"/>
+                <IconWrapper Icon={stat.icon} size="h-16 w-16" />
                 <h3 className="text-lg font-semibold text-gray-900 mt-4">
                   {stat.label}
                 </h3>
@@ -107,85 +89,58 @@ function Fund() {
           </div>
         </div>
       </div>
-
-      {/* Investment Strategy */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Investment Strategy
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We focus on early and growth-stage companies that are building
-              innovative solutions in technology and technology-enabled sectors.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {investmentCriteria.map((criteria, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">
-                  {criteria.title}
-                </h3>
-                <p className="text-gray-600">{criteria.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Investment Process */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Investment Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our structured approach ensures thorough evaluation and efficient
-              decision-making.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-20 bg-muted">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Our Support Partners
+          </h2>
+          <div className="grid gap-8 md:grid-cols-5">
             {[
               {
-                title: "Initial Screening",
-                description:
-                  "Review of business plan and initial assessment of fit with investment criteria",
-                duration: "1-2 weeks",
+                name: "Vistra ITCL",
+                role: "Fund Trustee",
+                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
               },
               {
-                title: "Due Diligence",
-                description:
-                  "Detailed analysis of business model, market, team, and financials",
-                duration: "4-6 weeks",
+                name: "KVU & Associates",
+                role: "Tax Advisor",
+                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
               },
               {
-                title: "Investment Decision",
-                description: "Final evaluation and terms negotiation",
-                duration: "2-3 weeks",
+                name: "One Stop Consultants",
+                role: "Legal Advisor",
+                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
               },
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#2C7C41] text-white font-bold mb-6">
-                  {index + 1}
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{step.description}</p>
-                <p className="text-sm text-[#2C7C41] font-semibold">
-                  {step.duration}
-                </p>
-              </div>
+              {
+                name: "HDFC Bank",
+                role: "Fund Banker",
+                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
+              },
+              {
+                name: "ICICI Bank",
+                role: "Fund Custodian",
+                logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-23%20105318-4Smrx4ncqti8paVSljGzkm78uKBTTw.png",
+              },
+            ].map((partner) => (
+              <Card key={partner.name} className="text-center">
+                <CardContent className="pt-6">
+                  <img
+                    src={partner.logo || "/placeholder.svg"}
+                    alt={partner.name}
+                    width={150}
+                    height={60}
+                    className="mx-auto mb-4"
+                  />
+                  <h3 className="font-semibold mb-1">{partner.name}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {partner.role}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

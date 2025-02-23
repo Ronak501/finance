@@ -29,10 +29,10 @@ function Team() {
         "https://www.linkedin.com/in/dr-a-m-sherry-2877834a/?originalSubdomain=in",
     },
     {
-      name: "Dr. A. M. Sherry",
+      name: "Bhavesh Dholiya",
       position: "Advisor",
       image: "photos/a4.jpg",
-      bio: "DEA Chair Professor (Financial Markets) AJNIFM, Ministry of Finance, Government of India",
+      bio: "Bhavesh Dholiya is a self-made entrepreneur who started in 2008 with cosmetics, expanded into perfumes with L’Amont.",
       linkedin:
         "https://www.linkedin.com/in/dr-a-m-sherry-2877834a/?originalSubdomain=in",
     },

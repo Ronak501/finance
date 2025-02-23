@@ -63,24 +63,18 @@ function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Graphs & Services</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-gray-400 hover:text-white">
-                  Return Profile
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-400 hover:text-white">
-                  Nifty SME Emerge
-                </a>
-              </li>
-              <li>
-                <a href="/" className="text-gray-400 hover:text-white">
-                  BSE SME IPO Index
-                </a>
-              </li>
-            </ul>
+            <h3 className="text-lg font-semibold mb-4">Disclaimer</h3>
+            <p className="text-gray-400 text-sm">
+              &apos;SME Growth Fund – Series Alpha&apos; is suitable only for
+              sophisticated investors. This document is confidential and
+              intended solely for select potential investors considering an
+              investment in the fund. Investments involve significant risks,
+              including lack of liquidity. Please refer to the “Risk Factors”
+              section of this memorandum before investing. Unauthorized
+              reproduction or distribution of this document is prohibited. This
+              is not a public offering, and neither this document nor the fund&apos;s
+              units have been registered under applicable laws.
+            </p>
           </div>
 
           <div>
@@ -96,7 +90,7 @@ function Footer() {
               <Mail className="h-6 w-6 text-[#2C7C41] mt-3" />
               <div>
                 <p className="text-gray-400 hover:text-white">
-                  Jigneshji2005@gmail.com
+                  infiplyadvisors@gmail.com
                 </p>
               </div>
             </div>
@@ -105,7 +99,7 @@ function Footer() {
               <MapPin className="h-6 w-6 text-[#2C7C41]" />
               <div>
                 <p className="text-gray-400 hover:text-white">
-                  605, Nathubhai Tower, Udhna 
+                  606-607, Nathubhai Tower, Udhna
                 </p>
                 <p className="text-gray-400 hover:text-white">
                   Main Road, Surat, Gujrat, 394210

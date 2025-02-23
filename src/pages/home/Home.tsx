@@ -84,17 +84,10 @@ function App() {
 
   const slides = [
     {
-      image: "/scroll/s3.jpg",
-      title: "Navigating Success Together",
-      description:
-        "We invest in innovative startups and growth companies that are shaping the future of technology and business.",
+      image: "/scroll/s1.png",
     },
     {
-      image:
-        "/scroll/s2.jpg",
-      title: "Building the Future of Finance",
-      description:
-        "Partner with us to turn your groundbreaking ideas into market-leading companies.",
+      image: "/scroll/s2.png",
     },
   ];
 
@@ -108,39 +101,30 @@ function App() {
   return (
     <div className="min-h-screen max-w-full overflow-hidden bg-white">
       {/* Hero Section with Pagination */}
-      <div className="pt-16">
-        <div className="relative h-[625px]">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-700 transform ${
-                currentSlide === index
-                  ? "opacity-100 translate-x-0"
-                  : currentSlide < index
-                  ? "opacity-0 translate-x-full"
-                  : "opacity-0 -translate-x-full"
-              }`}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r opacity-90 z-10"></div>
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="relative z-20 h-full flex items-center">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-                  <h1 className="text-5xl text-[#2C7C41] font-bold mb-6">{slide.title}</h1>
-                  <p className="text-xl mb-8 max-w-2xl text-[#2C7C41]">{slide.description}</p>
-                  <button className="bg-white text-[#2C7C41] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center">
-                    Get Started
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
-                </div>
+       <div className="max-w-full  mx-auto">
+        <div className="pt-16 mid:pt-24">
+          <div className="relative h-[250px] xs:h-[300px] mid:h-[500px] lg:h-[700px] xl:h-[800px]">
+            {/* Slides */}
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-all duration-700 transform ${
+                  currentSlide === index
+                    ? "opacity-100 translate-x-0"
+                    : currentSlide < index
+                    ? "opacity-0 translate-x-full"
+                    : "opacity-0 -translate-x-full"
+                }`}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r z-10"></div>
+                <img
+                  src={slide.image}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
-            </div>
-          ))}
+            ))}
 
-      {/* Pagination Dots */}
+          {/* Pagination Dots */}
           <div className="absolute bottom-8 left-0 right-0 z-30">
             <div className="flex justify-center space-x-3">
               {slides.map((_, index) => (
@@ -157,7 +141,8 @@ function App() {
               ))}
             </div>
           </div>
-        </div>
+          </div>
+          </div>
       </div>
 
       {/* Features Section */}

@@ -167,7 +167,7 @@ function MeetUs() {
                         Office Location
                       </h3>
                       <p className="text-gray-600">
-                        06, Nathubhai Tower, Udhna Main Road
+                        606-607, Nathubhai Tower, Udhna Main Road
                       </p>
                       <p className="text-gray-600">Surat, Gujarat, 394210</p>
                     </div>
@@ -183,7 +183,7 @@ function MeetUs() {
                     <Mail className="h-6 w-6 text-[#2C7C41] mt-1" />
                     <div className="ml-4">
                       <h3 className="font-semibold text-gray-800">Email</h3>
-                      <p className="text-gray-600">bmanish11@gmail.com</p>
+                      <p className="text-gray-600">infiplyadvisors@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
