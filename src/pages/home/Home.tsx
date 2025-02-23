@@ -102,7 +102,7 @@ function App() {
     <div className="min-h-screen max-w-full overflow-hidden bg-white">
       {/* Hero Section with Pagination */}
        <div className="max-w-full  mx-auto">
-        <div className="pt-16 mid:pt-24">
+        <div className="pt-16 mid:pt-24 ml-2">
           <div className="relative h-[250px] xs:h-[300px] mid:h-[500px] lg:h-[700px] xl:h-[800px]">
             {/* Slides */}
             {slides.map((slide, index) => (

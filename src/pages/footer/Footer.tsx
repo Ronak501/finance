@@ -106,7 +106,7 @@ function Footer() {
               <BookCheck className="h-6 w-6 text-[#2C7C41] mt-3" />
               <div>
                 <p className="text-gray-400 hover:text-white">
-                  Registration no. –IN/AIF1/24-25/1676
+                  SEBI Registration no. –IN/AIF1/24-25/1676
                 </p>
               </div>
             </div>

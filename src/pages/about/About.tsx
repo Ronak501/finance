@@ -1,6 +1,5 @@
 import type React from "react";
 import {
-  Flag,
   Scale,
   Rocket,
   Eye,
@@ -31,49 +30,6 @@ export default function About() {
       </div>
     </div>
   );
-
-  const targetProfile = [
-    {
-      title: "Owner Managers\nwith skin in the game",
-      position: "top-0 left-1/2 -translate-x-1/2 -translate-y-2",
-      number: "1",
-    },
-    {
-      title: "Long runway of\nGrowth",
-      position: "top-[15%] right-[15%]",
-      number: "2",
-    },
-    {
-      title: "Operating in\nNiche",
-      position: "right-0 top-1/2 translate-x-2 -translate-y-1/2",
-      number: "3",
-    },
-    {
-      title: "Economic Moat\nwith pricing power",
-      position: "bottom-[15%] right-[15%]",
-      number: "4",
-    },
-    {
-      title: "Focus on profitability\nand Return on Capital",
-      position: "bottom-0 left-1/2 -translate-x-1/2 translate-y-2",
-      number: "5",
-    },
-    {
-      title: "Cash generating\nbusinesses",
-      position: "bottom-[15%] left-[15%]",
-      number: "6",
-    },
-    {
-      title: "Low capital\nintensive",
-      position: "left-0 top-1/2 -translate-x-2 -translate-y-1/2",
-      number: "7",
-    },
-    {
-      title: "Ethical\nManagement",
-      position: "top-[15%] left-[15%]",
-      number: "8",
-    },
-  ];
 
   const values = [
     {
@@ -126,8 +82,8 @@ export default function About() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
               <h1 className="text-5xl font-bold mb-6">About Us</h1>
               <p className="text-xl max-w-2xl">
-                Building tomorrow's success stories through strategic
-                investments and visionary partnerships.
+                Cubs become lions, Saplings become tree, and SMEs become large
+                companies
               </p>
             </div>
           </div>
@@ -209,110 +165,59 @@ export default function About() {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-10 flex justify-center items-center overflow-x-auto">
-        <div className="max-w-3xl w-full px-4 lg:px-6">
-          {/* Title Section */}
-          <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Target Company Profile
-            </h1>
-            <p className="text-gray-600 text-sm sm:text-base max-w-lg mx-auto">
-              Key characteristics we look for in our target companies
-            </p>
-          </div>
-
-          {/* Diagram Container with Proper Centering & Spacing */}
-          <div className="relative h-full w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto aspect-square flex justify-center items-center">
-            {targetProfile.map((item, i) => (
-              <div
-                key={i}
-                className={`absolute ${item.position} flex items-center`}
-              >
-                <div className="relative">
-                  {/* Number Circle */}
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 bg-emerald-600 rounded-full flex items-center justify-center shadow-md">
-                    <span className="text-white font-bold text-xs sm:text-sm">
-                      {item.number}
-                    </span>
-                  </div>
-
-                  {/* Title Text - Prevent Overlapping */}
-                  <div
-                    className="absolute top-full mt-2 sm:mt-3 text-center text-gray-800 text-[10px] sm:text-xs font-medium"
-                    style={{
-                      minWidth: "90px",
-                      whiteSpace: "pre-wrap",
-                      overflowWrap: "break-word",
-                    }}
-                  >
-                    {item.title}
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* SVG Diagram */}
-            <svg className="absolute inset-0 w-full h-full">
-              {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-                <line
-                  key={i}
-                  x1="50%"
-                  y1="50%"
-                  x2={`${50 + 35 * Math.cos((angle * Math.PI) / 180)}%`}
-                  y2={`${50 + 35 * Math.sin((angle * Math.PI) / 180)}%`}
-                  stroke="#059669"
-                  strokeWidth="1.5"
-                  markerEnd="url(#arrowhead)"
-                />
-              ))}
-              <defs>
-                <marker
-                  id="arrowhead"
-                  markerWidth="6"
-                  markerHeight="4"
-                  refX="6"
-                  refY="2"
-                  orient="auto"
-                >
-                  <polygon points="0 0, 6 2, 0 4" fill="#059669" />
-                </marker>
-              </defs>
-            </svg>
-
-            {/* Center Flag Icon */}
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-700 rounded-full flex items-center justify-center shadow-lg">
-                <Flag className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-            </div>
+      <div className="w-full max-w-7xl mx-auto px-4 py-2 bg-grey-150">
+        {/* Header Section */}
+        <div className="bg-white text-gray-800 p-6 rounded-t-lg text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Target Companies
+          </h1>
+          <p className="text-lg md:text-xl max-w-4xl text-gray-800 mx-auto">
+            Business with potential to grow profitably for long run
+          </p>
+        </div>
+        <div className="w-full px-4 ">
+          <div className="max-w-4xl mx-auto">
+            <img
+              src="/scroll/ok.png"
+              alt="Target Companies"
+              className="w-full h-auto object-contain rounded-lg shadow-lg mb-0" // Add mb-0 to remove margin-bottom
+            />
           </div>
         </div>
       </div>
 
       <div className="py-16 mid:py-24 px-4 mid:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Our Values System</h2>
-            <p className="text-lg mid:text-xl text-gray-600 max-w-3xl mx-auto">
-              These core values guide our actions and define who we are as an organization
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 mid:grid-cols-2x lg:grid-cols-3 gap-6 mid:gap-8 lg:gap-12 max-w-7xl mx-auto">
-            {values.map((value, index) => (
-              <div key={index} className="flex flex-col items-center text-center group">
-                <div className={`w-16 h-16 mid:w-20 mid:h-20 lg:w-24 lg:h-24 rounded-full ${value.color} flex items-center justify-center mb-4 transform transition-transform group-hover:scale-110`}>
-                  <value.icon className="w-8 h-8 mid:w-10 mid:h-10 lg:w-12 lg:h-12 text-white" />
-                </div>
-                <h3 className="text-lg mid:text-xl lg:text-2xl font-semibold text-gray-900 mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-sm mid:text-base text-gray-600">
-                  {value.description}
-                </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Our Values System
+          </h2>
+          <p className="text-lg mid:text-xl text-gray-600 max-w-3xl mx-auto">
+            These core values guide our actions and define who we are as an
+            organization
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 mid:grid-cols-2x lg:grid-cols-3 gap-6 mid:gap-8 lg:gap-12 max-w-7xl mx-auto">
+          {values.map((value, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center group"
+            >
+              <div
+                className={`w-16 h-16 mid:w-20 mid:h-20 lg:w-24 lg:h-24 rounded-full ${value.color} flex items-center justify-center mb-4 transform transition-transform group-hover:scale-110`}
+              >
+                <value.icon className="w-8 h-8 mid:w-10 mid:h-10 lg:w-12 lg:h-12 text-white" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg mid:text-xl lg:text-2xl font-semibold text-gray-900 mb-2">
+                {value.title}
+              </h3>
+              <p className="text-sm mid:text-base text-gray-600">
+                {value.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
+    </div>
   );
 }

@@ -24,21 +24,25 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {["HOME", "ABOUT", "RESOURCES", "FUND DETAILS", "TEAM", "CONTACT"].map((item) => (
-              <NavLink
-                key={item}
-                to={`/${item.replace(/ /g, "").toLowerCase()}`}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
-                    isActive
-                      ? "text-[#2C7C41]"
-                      : "text-gray-700 hover:text-[#2C7C41]"
-                  }`
-                }
-              >
-                {item}
-              </NavLink>
-            ))}
+            {["HOME", "ABOUT", "RESOURCES", "FUND DETAILS", "TEAM", "CONTACT"].map((item) => {
+        // Set the correct route path (HOME should redirect to "/")
+        const routePath = item === "HOME" ? "/" : `/${item.replace(/ /g, "").toLowerCase()}`;
+          return (
+          <NavLink
+            key={item} // Unique key for React rendering
+            to={routePath} // Dynamic path for each navigation item
+            className={({ isActive }) =>
+              `text-sm font-medium transition-colors ${
+                isActive
+                  ? "text-[#2C7C41]" // Active link color
+                  : "text-gray-700 hover:text-[#2C7C41]" // Default & hover colors
+              }`
+            }
+          >
+            {item} {/* Display navigation item name */}
+          </NavLink>
+          )
+            })}
             <NavLink
               to="/login"
               className="bg-[#2C7C41] text-white px-6 py-2 rounded-md hover:bg-green-700 hover:text-black transition-colors"

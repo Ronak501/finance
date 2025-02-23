@@ -125,10 +125,16 @@ function Fund() {
         />
         <div className="relative z-20 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <h1 className="text-5xl font-bold mb-6">Fund Details</h1>
+            <h1 className="text-5xl font-bold mb-6">
+              SME Growth Fund – Series Alpha
+            </h1>
             <p className="text-xl max-w-2xl">
-              Cubs become lions, Saplings become tree, and SMEs become large
-              companies
+              An offering of &apos;INFIPLY SME Growth Fund&apos;, a SEBI
+              registered Cat. 1, Alternative Investment Fund
+            </p>
+            <p className="text-xl max-w-2xl">
+              Designed to support the growth and expansion of small and medium
+              enterprises and help investors build wealth
             </p>
           </div>
         </div>
@@ -136,14 +142,17 @@ function Fund() {
 
       {/* Fund Stats */}
       <div className="py-20 bg-white">
+        <h1 className="text-4xl font-bold text-center text-[#2C7C41] mb-12">
+          Fund Details
+        </h1>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fundStats.map((stat, index) => (
               <div
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <IconWrapper Icon={stat.icon} size="h-16 w-16"/>
+                <IconWrapper Icon={stat.icon} size="h-16 w-16" />
                 <h3 className="text-lg font-semibold text-gray-900 mt-4">
                   {stat.label}
                 </h3>
