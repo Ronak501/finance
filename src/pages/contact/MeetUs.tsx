@@ -21,7 +21,7 @@ const contactInformation: ContactInfo[] = [
   {
     icon: Mail,
     title: "Email Information",
-    details: ["info@chanakyafund.com"],
+    details: ["infiplyadvisors@gmail.com"],
   },
 ];
 
