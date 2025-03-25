@@ -7,6 +7,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import CAGRBarChart from "./CAGRBarChart";
+import TrackRecordSection from "./track-record-section";
 
 function Resources() {
   const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
@@ -116,6 +117,13 @@ function Resources() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* CAGR Bar Chart */}
+      <div className="py-20 flex min-h-screen flex-col">
+        <div className="mx-auto sm:px-6 lg:px-8">
+          <TrackRecordSection />
         </div>
       </div>
 

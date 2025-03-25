@@ -9,6 +9,8 @@ import "./TargetPortfolioCharacteristics.css";
 import NiftyIndicesBarGraph from "./NiftyIndicesBarGraph";
 import NiftySMEEmergeGraph from "./NiftySMEEmergeGraph";
 import NiftySMEIpoGraph from "./NiftySMEIpoGraph";
+import QuoteStrip from "./QuoteStrip";
+import AboutSection from "./AboutSection";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0); 
@@ -175,6 +177,10 @@ function App() {
         </div>
       </div>
 
+      <div className="w-full mx-auto py-12 bg-white">
+            <QuoteStrip/>
+      </div>
+
       <div className="w-full max-w-7xl mx-auto px-4 py-12 bg-white">
         {/* Header Section */}
         <div className="bg-white text-[#2C7C41] p-8 rounded-t-lg text-center">
@@ -207,6 +213,10 @@ function App() {
             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
           </a>
         </div>
+      </div>
+
+      <div className="w-full px-4 mx-auto py-12 bg-white">
+            <AboutSection/>
       </div>
 
       {/* Graphical Representation */}

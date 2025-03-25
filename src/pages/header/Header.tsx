@@ -92,7 +92,7 @@ const Navbar = () => {
               className="block w-full text-center bg-[#2C7C41] text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              LOGIN
+              Invest Now
             </NavLink>
           </div>
         </div>
