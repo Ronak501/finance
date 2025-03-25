@@ -165,7 +165,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 py-2 bg-grey-150">
+      <div className="w-full max-w-7xl mx-auto px-4 py-20 bg-grey-150">
         {/* Header Section */}
         <div className="bg-white text-gray-800 p-6 rounded-t-lg text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">

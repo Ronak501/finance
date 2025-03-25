@@ -47,7 +47,7 @@ const Navbar = () => {
               to="/login"
               className="bg-[#2C7C41] text-white px-6 py-2 rounded-md hover:bg-green-700 hover:text-black transition-colors"
             >
-              LOGIN
+              Invest Now
             </NavLink>
           </div>
 
