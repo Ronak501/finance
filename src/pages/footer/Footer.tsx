@@ -42,10 +42,10 @@ function Footer() {
               <li className="flex items-center">
                 <ChevronsRight />
                 <Link
-                  to="/resources"
+                  to="/records"
                   className="text-gray-400 hover:text-white"
                 >
-                  Resources
+                  Records
                 </Link>
               </li>
               <li className="flex items-center">

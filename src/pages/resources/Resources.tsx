@@ -1,13 +1,5 @@
-import {
-  BookOpen,
-  FileText,
-  Newspaper,
-  Video,
-  Podcast,
-  ExternalLink,
-} from "lucide-react";
 import CAGRBarChart from "./CAGRBarChart";
-import TrackRecordSection from "./track-record-section";
+import { Award, Globe, TrendingUp, Users } from "lucide-react";
 
 function Resources() {
   const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
@@ -26,77 +18,6 @@ function Resources() {
     </div>
   );
 
-  const resources = [
-    {
-      category: "Research Reports",
-      icon: <IconWrapper Icon={FileText} />,
-      items: [
-        {
-          title: "State of SaaS in 2024",
-          description:
-            "Comprehensive analysis of the SaaS landscape and emerging trends",
-          date: "March 2024",
-        },
-        {
-          title: "FinTech Market Overview",
-          description:
-            "Deep dive into the evolving financial technology sector",
-          date: "February 2024",
-        },
-      ],
-    },
-    {
-      category: "Blog Posts",
-      icon: <IconWrapper Icon={BookOpen} />,
-      items: [
-        {
-          title: "Building Resilient Startups",
-          description: "Key strategies for startup success in uncertain times",
-          date: "March 15, 2024",
-        },
-        {
-          title: "Fundraising Best Practices",
-          description: "Essential tips for early-stage fundraising",
-          date: "March 1, 2024",
-        },
-      ],
-    },
-    {
-      category: "News & Updates",
-      icon: <IconWrapper Icon={Newspaper} />,
-      items: [
-        {
-          title: "Q1 2024 Investment Highlights",
-          description:
-            "Overview of our recent investments and portfolio updates",
-          date: "March 2024",
-        },
-      ],
-    },
-    {
-      category: "Video Content",
-      icon: <IconWrapper Icon={Video} />,
-      items: [
-        {
-          title: "Founder Stories Series",
-          description: "Interviews with successful startup founders",
-          date: "Ongoing",
-        },
-      ],
-    },
-    {
-      category: "Podcasts",
-      icon: <IconWrapper Icon={Podcast} />,
-      items: [
-        {
-          title: "VentureFund Insights",
-          description: "Weekly discussions on venture capital and startups",
-          date: "Weekly",
-        },
-      ],
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -110,7 +31,7 @@ function Resources() {
           />
           <div className="relative z-20 h-full flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-              <h1 className="text-5xl font-bold mb-6">Resources</h1>
+              <h1 className="text-5xl font-bold mb-6">Records</h1>
               <p className="text-xl max-w-2xl">
                 Insights, research, and knowledge to help founders build
                 exceptional companies.
@@ -120,45 +41,110 @@ function Resources() {
         </div>
       </div>
 
-      {/* CAGR Bar Chart */}
-      <div className="py-20 flex min-h-screen flex-col">
-        <div className="mx-auto sm:px-6 lg:px-8">
-          <TrackRecordSection />
-        </div>
-      </div>
-
-      {/* Resources Grid */}
-      <div className="py-20">
+      <section className="w-full bg-gray-50 text-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resources.map((category, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
-              >
-                {category.icon}
-                <h2 className="text-2xl font-bold mb-6 text-gray-800">
-                  {category.category}
-                </h2>
-                <div className="space-y-6">
-                  {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="group">
-                      <a href="#" className="block hover:text-[#2C7C41]">
-                        <h3 className="text-lg font-semibold text-[#2C7C41] mb-2 group-hover:text-[#04be20] flex items-center">
-                          {item.title}
-                          <ExternalLink className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </h3>
-                        <p className="text-gray-600 mb-2">{item.description}</p>
-                        <p className="text-sm text-gray-400">{item.date}</p>
-                      </a>
-                    </div>
-                  ))}
-                </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 text-[#2C7C41]">
+              Our Track Record
+            </h2>
+            <p className="text-2xl font-medium text-black">
+              Trusted Expertise. Proven Execution.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-16">
+            <p className="text-lg text-black mb-8">
+              At Infiply Advisors LLP, our strength lies in our ability to
+              identify scalable opportunities, deploy capital strategically, and
+              actively support the growth journey of small and medium-sized
+              enterprises. With decades of collective experience in investment
+              management and capital markets, our leadership team has
+              successfully partnered with high-potential businesses across a
+              range of sectors.
+            </p>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-4 text-[#2C7C41]">
+                What Sets Our Approach Apart:
+              </h3>
+              <ul className="space-y-2 text-gray-300">
+                <li className="flex items-start text-black">
+                  <span className="text-green-400 mr-2">•</span>
+                  Extensive experience in SME investing and capital market
+                  strategy
+                </li>
+                <li className="flex items-start text-black">
+                  <span className="text-green-400 mr-2">•</span>
+                  Robust due diligence and risk management frameworks
+                </li>
+                <li className="flex items-start text-black">
+                  <span className="text-green-400 mr-2">•</span>
+                  Strong networks across founders, advisors, and institutional
+                  stakeholders
+                </li>
+                <li className="flex items-start text-black">
+                  <span className="text-green-400 mr-2">•</span>
+                  Active involvement in unlocking operational and strategic
+                  value
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-lg font-medium text-[#2C7C41]">
+              We're not just investors—we're long-term partners committed to
+              transforming potential into performance.
+            </p>
+          </div>
+
+          {/* Trust Bar */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-slate-100 p-6 rounded-lg text-center">
+              <div className="flex justify-center mb-4">
+                <IconWrapper Icon={Users} size="h-12 w-12 text-[#2C7C41]" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold mb-2">100+ Combined Years</h3>
+              <p className="text-black">Of Investment Experience</p>
+            </div>
+
+            <div className="bg-slate-100 p-6 rounded-lg text-center">
+              <div className="flex justify-center mb-4">
+                <IconWrapper Icon={Globe} size="h-12 w-12 text-[#2C7C41]" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Pan-India Network</h3>
+              <p className="text-black">Across Multiple Industries</p>
+            </div>
+
+            <div className="bg-slate-100 p-6 rounded-lg text-center">
+              <div className="flex justify-center mb-4">
+                <IconWrapper
+                  Icon={TrendingUp}
+                  size="h-12 w-12 text-[#2C7C41]"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Research-Driven</h3>
+              <p className="text-black">Investment Strategy</p>
+            </div>
+          </div>
+
+          {/* Founder Quote */}
+          <div className="bg-slate-100 p-8 rounded-lg max-w-3xl mx-auto">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 mr-4">
+                <Award className="h-10 w-10 text-[#2C7C41]" />
+              </div>
+              <div>
+                <blockquote className="text-xl italic text-black mb-4">
+                  "We don't just invest in companies—we walk with founders to
+                  build legacy businesses."
+                </blockquote>
+                <cite className="block text-right text-sm text-[#2C7C41]">
+                  – Manish Bansal, Founder
+                </cite>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Graph Section */}
       <div className="py-20 m-auto align-center bg-gray-100">

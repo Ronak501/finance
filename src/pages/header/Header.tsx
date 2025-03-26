@@ -24,7 +24,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {["HOME", "ABOUT", "RESOURCES", "FUND DETAILS", "TEAM", "CONTACT"].map((item) => {
+            {["HOME", "ABOUT", "RECORDS", "FUND DETAILS", "TEAM", "CONTACT"].map((item) => {
         // Set the correct route path (HOME should redirect to "/")
         const routePath = item === "HOME" ? "/" : `/${item.replace(/ /g, "").toLowerCase()}`;
           return (
@@ -44,7 +44,7 @@ const Navbar = () => {
           )
             })}
             <NavLink
-              to="/login"
+              to="/signin"
               className="bg-[#2C7C41] text-white px-6 py-2 rounded-md hover:bg-green-700 hover:text-black transition-colors"
             >
               Invest Now
@@ -71,7 +71,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg absolute w-full">
           <div className="px-4 pt-2 pb-4 space-y-2">
-            {["HOME", "ABOUT", "RESOURCES", "FUND DETAILS", "TEAM", "CONTACT"].map((item) => (
+            {["HOME", "ABOUT", "RECORDS", "FUND DETAILS", "TEAM", "CONTACT"].map((item) => (
               <NavLink
                 key={item}
                 to={`/${item.replace(/ /g, "").toLowerCase()}`}
@@ -88,7 +88,7 @@ const Navbar = () => {
               </NavLink>
             ))}
             <NavLink
-              to="/login"
+              to="/signin"
               className="block w-full text-center bg-[#2C7C41] text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
               onClick={() => setIsOpen(false)}
             >

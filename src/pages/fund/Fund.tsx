@@ -1,5 +1,6 @@
 import React from 'react';
-import { BarChart2, PieChart, Combine as ChartNoAxesCombined, HeartHandshake, BookType, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
+import { BarChart2, BarChart, TrendingUp, Target, PieChart, Combine as ChartNoAxesCombined, HeartHandshake, BookType, Clock, CheckCircle } from "lucide-react";
 import { GraduationCap, Users, Heart, Puzzle as PuzzlePiece } from 'lucide-react';
 
 function ImpactCard({ title, icon: Icon, description, isGreen }: {
@@ -44,6 +45,49 @@ function ImpactCard({ title, icon: Icon, description, isGreen }: {
 }
 
 function Fund() {
+
+  const [dealSize, setDealSize] = useState(0);
+  const [investeeCompanies, setInvesteeCompanies] = useState(0);
+  const [minorityStake, setMinorityStake] = useState(0);
+  const [sponsorCommitment, setSponsorCommitment] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (dealSize < 10) setDealSize((prev) => Math.min(prev + 1, 10));
+      if (investeeCompanies < 25)
+        setInvesteeCompanies((prev) => Math.min(prev + 1, 25));
+      if (minorityStake < 49)
+        setMinorityStake((prev) => Math.min(prev + 1, 49));
+      if (sponsorCommitment < 15)
+        setSponsorCommitment((prev) => Math.min(prev + 1, 15));
+    }, 100);
+
+    return () => clearInterval(intervalId);
+  }, [dealSize, investeeCompanies, minorityStake, sponsorCommitment]);
+
+  const metrics = [
+    {
+      icon: BarChart,
+      value: `₹${dealSize}-15 Cr`,
+      label: "Average Deal Size",
+    },
+    {
+      icon: Target,
+      value: `${investeeCompanies}-30`,
+      label: "Target Investee Companies",
+    },
+    {
+      icon: TrendingUp,
+      value: `${minorityStake}%`,
+      label: "Minority Stake Investment",
+    },
+    {
+      icon: PieChart,
+      value: `${sponsorCommitment}%`,
+      label: "Sponsor Commitment",
+    },
+  ];
+
   const fundStats = [
     {
       label: "Fund Size",
@@ -100,6 +144,15 @@ function Fund() {
     }
   ];
 
+  const highlights = [
+    "Launch Date: April 2025",
+    "Structure: Close-ended Category I AIF, registered under SEBI guidelines",
+    "Fund Corpus: INR 100 Crore, with an additional INR 50 Crore green shoe option",
+    "Investor Entry Point: Minimum capital commitment of INR 1 Crore",
+    "Portfolio Breadth: Investments in approximately 25 to 30 carefully selected companies",
+    "Investment Tenure: 5-year term, focused on growth and value unlocking",
+  ];
+
   const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({ Icon, size = "h-16 w-16" }) => (
     <div className="icon-wrapper">
       <div className="icon-inner">
@@ -140,8 +193,151 @@ function Fund() {
         </div>
       </div>
 
+      <section className="py-16 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold tracking-tight mb-6 text-[#2C7C41] text-center">
+              Fund Overview
+            </h2>
+
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <p className="text-gray-700 mb-6">
+                Infiply Advisors LLP manages a Category I Alternative Investment
+                Fund (AIF) with a dedicated focus on India's thriving small and
+                medium enterprise (SME) sector. Designed for investors seeking
+                long-term value creation, our flagship fund – Series Alpha –
+                invests in high-potential businesses that are poised for growth
+                and scalability.
+              </p>
+
+              <p className="text-gray-700">
+                Step into the world of Infiply Advisors LLP, where expertise
+                meets opportunity in the landscape of strategic investment. Our
+                flagship SME Growth Fund – Series Alpha is just the beginning of
+                a robust portfolio of targeted investment solutions designed to
+                harness the untapped potential of small and medium enterprises
+                destined for greatness.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold tracking-tight mb-6 text-[#2C7C41] text-center">
+              Fund Highlights
+            </h2>
+
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <ul className="space-y-4">
+                {highlights.map((highlight, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-[#2C7C41] mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold tracking-tight mb-6 text-[#2C7C41] text-center">
+              Our Investment Approach
+            </h2>
+
+            <div className="space-y-8">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-[#2C7C41]">
+                  Purpose-Driven and Sector-Agnostic
+                </h3>
+                <p className="text-gray-700">
+                  While we remain sector-agnostic, our investment thesis is
+                  built around scalable, capital-efficient, founder-led
+                  businesses with strong fundamentals. We invest in unlisted
+                  SMEs as well as those listed or to be listed on SME platforms,
+                  with an approach tailored to the unique lifecycle of each
+                  company.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-[#2C7C41]">
+                  Strategic Capital. Operational Insight. Sustainable Returns.
+                </h3>
+                <p className="text-gray-700">
+                  Our role extends beyond capital—we provide strategic
+                  direction, business mentorship, and access to networks that
+                  empower entrepreneurs to scale. Through disciplined research,
+                  a structured investment process, and risk-managed
+                  diversification, we strive to deliver stable and superior
+                  returns.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-[#2C7C41]">
+                  What Sets Infiply Apart
+                </h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>
+                    Strong leadership with 20+ years of capital markets
+                    expertise
+                  </li>
+                  <li>
+                    Clear investment processes and governance-driven
+                    decision-making
+                  </li>
+                  <li>
+                    Flexibility in deal structuring and sector preferences
+                  </li>
+                  <li>
+                    Focus on long-term partnerships, not just short-term returns
+                  </li>
+                  <li>
+                    Transparent communication and robust investor reporting
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight mb-10 text-[#2C7C41] text-center">
+              Fund Snapshot
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {metrics.map((metric, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center"
+                >
+                  <div className="mb-4 p-3 rounded-full bg-[#2C7C41]/10">
+                    <metric.icon className="h-6 w-6 text-[#2C7C41]" />
+                  </div>
+                  <div className="text-3xl font-bold text-[#2C7C41] mb-2">
+                    {metric.value}
+                  </div>
+                  <div className="text-gray-600">{metric.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Fund Stats */}
-      <div className="py-20 bg-white">
+      <div className="py-12 bg-white">
         <h1 className="text-4xl font-bold text-center text-[#2C7C41] mb-12">
           Fund Details
         </h1>
