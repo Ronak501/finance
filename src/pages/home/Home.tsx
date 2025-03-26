@@ -5,12 +5,14 @@ import {
   HandCoins,
   ArrowRight,
 } from "lucide-react";
+import { Button } from "../../components/ui/button";
 import "./TargetPortfolioCharacteristics.css";
 import NiftyIndicesBarGraph from "./NiftyIndicesBarGraph";
 import NiftySMEEmergeGraph from "./NiftySMEEmergeGraph";
 import NiftySMEIpoGraph from "./NiftySMEIpoGraph";
 import QuoteStrip from "./QuoteStrip";
 import AboutSection from "./AboutSection";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0); 
@@ -19,10 +21,11 @@ function App() {
   const [minorityStakeInvestment, setMinorityStakeInvestment] = useState(0);
   const [sponsorCommitment, setSponsorCommitment] = useState(0);
   const [fundManagerCommitment, setFundManagerCommitment] = useState(0);
+  const navigate = useNavigate();
 
   const IconWrapper: React.FC<{ Icon: React.ElementType; size?: string }> = ({
     Icon,
-    size = "h-16 w-16",
+    size = "h-8 w-8",
   }) => (
     <div className="icon-wrapper">
       <div className="icon-inner">
@@ -103,7 +106,7 @@ function App() {
   return (
     <div className="min-h-screen max-w-full overflow-hidden bg-white">
       {/* Hero Section with Pagination */}
-       <div className="max-w-full  mx-auto">
+      <div className="max-w-full  mx-auto">
         <div className="pt-16 mid:pt-24 ml-2">
           <div className="relative h-[250px] xs:h-[300px] mid:h-[500px] lg:h-[700px] xl:h-[800px]">
             {/* Slides */}
@@ -126,47 +129,38 @@ function App() {
               </div>
             ))}
 
-          {/* Pagination Dots */}
-          <div className="absolute bottom-8 left-0 right-0 z-30">
-            <div className="flex justify-center space-x-3">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    currentSlide === index
-                      ? "w-8 bg-white"
-                      : "w-2 bg-white/50 hover:bg-white/75"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+            {/* Pagination Dots */}
+            <div className="absolute bottom-8 left-0 right-0 z-30">
+              <div className="flex justify-center space-x-3">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      currentSlide === index
+                        ? "w-8 bg-white"
+                        : "w-2 bg-white/50 hover:bg-white/75"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-          </div>
-          </div>
+        </div>
       </div>
 
-      {/* Features Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#2C7C41] mb-4">
-              Overview of INFIPLY SME Growth Fund
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive tools and services to facilitate successful business
-              transactions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100"
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
               >
-                <IconWrapper Icon={feature.icon} size="h-16 w-16" />
+                <div className="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-[#2C7C41]/10">
+                  <IconWrapper Icon={feature.icon} />
+                </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-800">
                   {feature.title}
                 </h3>
@@ -177,65 +171,48 @@ function App() {
         </div>
       </div>
 
-      <div className="w-full mx-auto py-12 bg-white">
-            <QuoteStrip/>
-      </div>
+      {/* Quote/Philosophy Strip */}
+      <QuoteStrip />
 
-      <div className="w-full max-w-7xl mx-auto px-4 py-12 bg-white">
-        {/* Header Section */}
-        <div className="bg-white text-[#2C7C41] p-8 rounded-t-lg text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Investment Strategy
-          </h1>
-          <p className="text-lg md:text-xl max-w-4xl mx-auto">
-            Invest primarily in securities of those companies, which are listed
-            or proposed to be listed on SME exchange or SME segment of an
-            exchange
-          </p>
-        </div>
-        <div className="w-full px-4 py-8">
-          <div className="max-w-4xl mx-auto">
-            <img
-              src="/photos/is.jpg"
-              alt="Investment Strategy"
-              className="w-full h-auto object-contain rounded-lg shadow-lg"
-            />
+      {/* Intro Section: Who We Are */}
+      <AboutSection />
+
+      {/* Market Insights Section */}
+      <div className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#2C7C41] mb-4">
+              Market Insights
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Understanding the growth potential of the SME sector
+            </p>
           </div>
-        </div>
-        <div className="mt-12 text-center">
-          <a
-            href="/about"
-            className="inline-flex items-center justify-center space-x-3 bg-[#2C7C41] text-white px-8 py-4 rounded-full hover:bg-[#2C7C41]/90 transition-colors hover:text-black duration-300 group"
-          >
-            <span className="text-lg font-semibold hover:text-black">
-              Learn More About Our Strategy
-            </span>
-            <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
-        </div>
-      </div>
 
-      <div className="w-full px-4 mx-auto py-12 bg-white">
-            <AboutSection/>
-      </div>
+          <div className="space-y-16">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <NiftyIndicesBarGraph />
+            </div>
 
-      {/* Graphical Representation */}
-      <div className="py-20 m-auto align-center bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NiftySMEEmergeGraph />
-        </div>
-      </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <NiftySMEEmergeGraph />
+            </div>
 
-      {/* Graph Section */}
-      <div className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NiftyIndicesBarGraph />
-        </div>
-      </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <NiftySMEIpoGraph />
+            </div>
+          </div>
 
-      <div className="py-20 m-auto align-center bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NiftySMEIpoGraph />
+          <div className="mt-12 text-center">
+            <Button
+              className="bg-[#2C7C41] hover:bg-[#2C7C41]/90 text-white group"
+              size="lg"
+              onClick={() => navigate("/about")}
+            >
+              <span>Learn More About Our Strategy</span>
+              <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </div>
         </div>
       </div>
     </div>

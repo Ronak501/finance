@@ -126,7 +126,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 VentureFund. All rights reserved.</p>
+          <p>&copy; 2024 InfiplyFund. All rights reserved.</p>
         </div>
       </div>
     </footer>
