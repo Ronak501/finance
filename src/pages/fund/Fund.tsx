@@ -112,7 +112,7 @@ function Fund() {
     {
       label: "Status of Fund",
       value: "Contributory Determinate Investment Trust under the Indian Trusts Act",
-      icon: BarChart2,
+      icon: BarChart,
     },
     {
       label: "Tenor",

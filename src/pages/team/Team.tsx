@@ -33,8 +33,7 @@ function Team() {
       position: "Advisor",
       image: "photos/a4.jpg",
       bio: "Bhavesh Dholiya is a self-made entrepreneur who started in 2008 with cosmetics, expanded into perfumes with L’Amont.",
-      linkedin:
-        "https://www.linkedin.com/in/dr-a-m-sherry-2877834a/?originalSubdomain=in",
+      linkedin: "https://www.linkedin.com/in/bhavesh-dholiya-17538343",
     },
   ];
 
@@ -86,7 +85,7 @@ Manish is serving as a part-time consultant for the Department of Economic Affai
       </div>
 
       {/* Sponsor Section - Moved up for priority */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 px-2 md:py-24 bg-gray-50">
         <div className="container px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
