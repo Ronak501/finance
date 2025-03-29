@@ -92,7 +92,7 @@ export default function About() {
 
       <div className="bg-gradient-to-br from-slate-50 to-slate-100 pt-20 pb-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center text-slate-800 mb-12">
+          <h1 className="text-4xl font-bold text-center text-[#2C7C41] mb-12">
             Our Purpose & Direction
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -126,7 +126,7 @@ export default function About() {
       <div className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-[#2C7C41] mb-4">
               Investment Strategy
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -168,10 +168,10 @@ export default function About() {
       <div className="w-full max-w-7xl mx-auto px-4 py-20 bg-white">
         {/* Header Section */}
         <div className="bg-white text-gray-800 p-6 rounded-t-lg text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl text-[#2C7C41] md:text-5xl font-bold mb-6">
             Target Companies
           </h1>
-          <p className="text-lg md:text-xl max-w-4xl text-gray-800 mx-auto">
+          <p className="text-lg md:text-xl max-w-4xl text-gray-800 font-semibold mx-auto">
             Business with potential to grow profitably for long run
           </p>
         </div>
@@ -188,7 +188,7 @@ export default function About() {
 
       <div className="py-16 mid:py-24 px-4 mid:px-8 bg-gray-100">
         <div className="text-center mb-12">
-          <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl mid:text-4xl lg:text-5xl font-bold text-[#2C7C41] mb-4">
             Our Values System
           </h2>
           <p className="text-lg mid:text-xl text-gray-600 max-w-3xl mx-auto">

@@ -85,10 +85,10 @@ Manish is serving as a part-time consultant for the Department of Economic Affai
       </div>
 
       {/* Sponsor Section - Moved up for priority */}
-      <section className="py-16 px-2 md:py-24 bg-gray-50">
+      <section className="py-8 px-2 md:py-16 bg-gray-50">
         <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl text-[#2C7C41] font-bold mb-4">
               Sponsor of the Fund
             </h2>
             <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
@@ -148,10 +148,10 @@ Manish is serving as a part-time consultant for the Department of Economic Affai
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[#2C7C41] mb-4">
               Advisors Team
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
